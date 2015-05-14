@@ -1,0 +1,207 @@
+May-13 20:01:45.018 [main] DEBUG nextflow.cli.Launcher - $> /users/cn/ptommaso/bin/nextflow -c ../docker.config run ../main.nf
+May-13 20:01:45.064 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 0.13.4
+May-13 20:01:45.064 [main] INFO  nextflow.cli.CmdRun - Launching ../main.nf
+May-13 20:01:45.078 [main] DEBUG nextflow.script.ConfigBuilder - User config file: ../docker.config
+May-13 20:01:45.080 [main] DEBUG nextflow.script.ConfigBuilder - Parsing config file: /scratch/tmp/flow/docker.config
+May-13 20:01:45.392 [main] DEBUG nextflow.Session - Session uuid: 44d76fbb-d065-4182-9ae5-d8b1d7713dee
+May-13 20:01:45.394 [main] DEBUG nextflow.Session - Executor pool size: 11
+May-13 20:01:45.410 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 0.13.4 build 2983
+  Modified: 04-05-2015 07:25 UTC (09:25 CEST)
+  System: Linux 2.6.32-431.29.2.el6.x86_64
+  Runtime: Groovy 2.3.11 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_40-b26
+  Encoding: UTF-8 (UTF-8)
+  Process: 26691@node-hp0001cn.linux.crg.es [172.21.11.104]
+
+May-13 20:01:45.437 [main] DEBUG nextflow.Session - Session start invoked
+May-13 20:01:45.437 [main] DEBUG nextflow.Session - Registering observer: nextflow.trace.TraceFileObserver
+May-13 20:01:45.438 [main] DEBUG nextflow.Session - Registering observer: nextflow.trace.TimelineObserver
+May-13 20:01:45.442 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+May-13 20:01:45.443 [main] DEBUG nextflow.trace.TraceFileObserver - Flow starting -- trace file: /scratch/tmp/flow/docker_18/trace.csv
+May-13 20:01:45.452 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+May-13 20:01:45.643 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+May-13 20:01:45.691 [main] DEBUG nextflow.Channel - files for syntax: glob; folder: ../data/raw/; pattern: **_R1*{fastq,fq,fastq.gz,fq.gz}; options: null
+May-13 20:01:45.743 [main] DEBUG nextflow.Channel - files for syntax: glob; folder: ../data/raw/; pattern: **_R2*{fastq,fq,fastq.gz,fq.gz}; options: null
+May-13 20:01:45.845 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+May-13 20:01:45.845 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+May-13 20:01:45.851 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+May-13 20:01:45.853 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+May-13 20:01:45.860 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'local' > capacity: 10; pollInterval: 100ms; dumpInterval: 5m 
+May-13 20:01:45.865 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: TaskPollingMonitor
+May-13 20:01:45.865 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+May-13 20:01:45.869 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+May-13 20:01:45.884 [main] DEBUG nextflow.Session - >>> barrier register (process: fastqToSsake)
+May-13 20:01:45.888 [main] DEBUG nextflow.script.BaseParam - output > channel unknown: ssakeFasta -- creating a new instance
+May-13 20:01:45.899 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > fastqToSsake -- maxForks: 11
+May-13 20:01:45.904 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+May-13 20:01:45.904 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+May-13 20:01:45.905 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+May-13 20:01:45.905 [main] DEBUG nextflow.Session - >>> barrier register (process: reformat)
+May-13 20:01:45.905 [main] DEBUG nextflow.script.BaseParam - output > channel unknown: reformatted -- creating a new instance
+May-13 20:01:45.909 [Actor Thread 4] DEBUG n.processor.ParallelTaskProcessor - <fastqToSsake> Poison pill arrived
+May-13 20:01:45.910 [Actor Thread 1] DEBUG nextflow.processor.StateObj - <fastqToSsake> State before poison: StateObj[submitted: 8; completed: 0; poisoned: false; allScalar: false]
+May-13 20:01:45.913 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > reformat -- maxForks: 11
+May-13 20:01:45.915 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+May-13 20:01:45.915 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+May-13 20:01:45.916 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+May-13 20:01:45.916 [main] DEBUG nextflow.Session - >>> barrier register (process: ssake)
+May-13 20:01:45.916 [main] DEBUG nextflow.script.BaseParam - output > channel unknown: contigs -- creating a new instance
+May-13 20:01:45.923 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > ssake -- maxForks: 11
+May-13 20:01:45.929 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+May-13 20:01:45.929 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+May-13 20:01:45.929 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+May-13 20:01:45.929 [main] DEBUG nextflow.Session - >>> barrier register (process: alignContigs)
+May-13 20:01:45.930 [main] DEBUG nextflow.script.BaseParam - output > channel unknown: contigsBam -- creating a new instance
+May-13 20:01:45.930 [main] DEBUG nextflow.script.BaseParam - output > channel unknown: contigsVcf -- creating a new instance
+May-13 20:01:45.937 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > alignContigs -- maxForks: 11
+May-13 20:01:45.956 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+May-13 20:01:45.956 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+May-13 20:01:45.957 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+May-13 20:01:45.957 [main] DEBUG nextflow.Session - >>> barrier register (process: interleave)
+May-13 20:01:45.957 [main] DEBUG nextflow.script.BaseParam - output > channel unknown: interleavedReads -- creating a new instance
+May-13 20:01:45.985 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > interleave -- maxForks: 11
+May-13 20:01:45.995 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+May-13 20:01:45.995 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+May-13 20:01:45.995 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+May-13 20:01:45.996 [main] DEBUG nextflow.Session - >>> barrier register (process: alignReads)
+May-13 20:01:45.996 [main] DEBUG nextflow.script.BaseParam - output > channel unknown: readsBam -- creating a new instance
+May-13 20:01:45.996 [main] DEBUG nextflow.script.BaseParam - output > channel unknown: readsVcf -- creating a new instance
+May-13 20:01:46.002 [Actor Thread 4] DEBUG n.processor.ParallelTaskProcessor - <interleave> Poison pill arrived
+May-13 20:01:46.005 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > alignReads -- maxForks: 11
+May-13 20:01:46.006 [Actor Thread 1] DEBUG nextflow.processor.StateObj - <interleave> State before poison: StateObj[submitted: 8; completed: 0; poisoned: false; allScalar: false]
+May-13 20:01:46.008 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+May-13 20:01:46.009 [main] DEBUG nextflow.Session - Session await
+May-13 20:01:46.042 [Actor Thread 6] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /scratch/tmp/flow/bin
+May-13 20:01:46.042 [Actor Thread 10] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /scratch/tmp/flow/bin
+May-13 20:01:46.042 [Actor Thread 18] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /scratch/tmp/flow/bin
+May-13 20:01:46.042 [Actor Thread 14] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /scratch/tmp/flow/bin
+May-13 20:01:46.042 [Actor Thread 3] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /scratch/tmp/flow/bin
+May-13 20:01:46.042 [Actor Thread 5] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /scratch/tmp/flow/bin
+May-13 20:01:46.042 [Actor Thread 7] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /scratch/tmp/flow/bin
+May-13 20:01:46.042 [Actor Thread 15] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /scratch/tmp/flow/bin
+May-13 20:01:46.042 [Actor Thread 11] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /scratch/tmp/flow/bin
+May-13 20:01:46.042 [Actor Thread 8] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /scratch/tmp/flow/bin
+May-13 20:01:46.129 [Actor Thread 12] INFO  nextflow.processor.TaskDispatcher - [bc/30fc24] Submitted process > interleave (1)
+May-13 20:01:46.129 [Actor Thread 18] INFO  nextflow.processor.TaskDispatcher - [df/89671e] Submitted process > interleave (8)
+May-13 20:01:46.131 [Actor Thread 7] INFO  nextflow.processor.TaskDispatcher - [6e/b7a628] Submitted process > fastqToSsake (3)
+May-13 20:01:46.131 [Actor Thread 2] INFO  nextflow.processor.TaskDispatcher - [56/051285] Submitted process > fastqToSsake (1)
+May-13 20:01:46.131 [Actor Thread 15] INFO  nextflow.processor.TaskDispatcher - [f4/bdd626] Submitted process > interleave (5)
+May-13 20:01:46.131 [Actor Thread 11] INFO  nextflow.processor.TaskDispatcher - [70/7cedbe] Submitted process > interleave (2)
+May-13 20:01:46.132 [Actor Thread 16] INFO  nextflow.processor.TaskDispatcher - [5b/b3036f] Submitted process > interleave (6)
+May-13 20:01:46.132 [Actor Thread 9] INFO  nextflow.processor.TaskDispatcher - [c2/4b7b8e] Submitted process > fastqToSsake (7)
+May-13 20:01:46.132 [Actor Thread 14] INFO  nextflow.processor.TaskDispatcher - [25/d2d1ae] Submitted process > interleave (4)
+May-13 20:01:46.132 [Actor Thread 8] INFO  nextflow.processor.TaskDispatcher - [2c/cc4fdc] Submitted process > fastqToSsake (6)
+May-13 20:02:05.501 [Actor Thread 3] INFO  nextflow.processor.TaskDispatcher - [c9/63fb37] Submitted process > fastqToSsake (4)
+May-13 20:02:17.528 [Actor Thread 17] INFO  nextflow.processor.TaskDispatcher - [62/6fa823] Submitted process > interleave (7)
+May-13 20:02:17.540 [Actor Thread 5] INFO  nextflow.processor.TaskDispatcher - [3b/553041] Submitted process > fastqToSsake (2)
+May-13 20:02:17.552 [Actor Thread 10] INFO  nextflow.processor.TaskDispatcher - [a7/e64be4] Submitted process > fastqToSsake (8)
+May-13 20:02:17.952 [Actor Thread 13] INFO  nextflow.processor.TaskDispatcher - [c7/6d77c3] Submitted process > interleave (3)
+May-13 20:02:24.127 [Actor Thread 6] INFO  nextflow.processor.TaskDispatcher - [20/3b62f6] Submitted process > fastqToSsake (5)
+May-13 20:02:24.143 [Actor Thread 19] INFO  nextflow.processor.TaskDispatcher - [b2/8812f2] Submitted process > reformat (1)
+May-13 20:02:24.164 [Actor Thread 21] INFO  nextflow.processor.TaskDispatcher - [cc/6b4482] Submitted process > reformat (2)
+May-13 20:02:24.176 [Actor Thread 17] INFO  nextflow.processor.TaskDispatcher - [24/11b7c8] Submitted process > reformat (3)
+May-13 20:02:24.200 [Actor Thread 5] INFO  nextflow.processor.TaskDispatcher - [27/0c2ef0] Submitted process > reformat (4)
+May-13 20:02:50.709 [Actor Thread 13] INFO  nextflow.processor.TaskDispatcher - [be/86030a] Submitted process > alignReads (1)
+May-13 20:02:59.956 [Actor Thread 22] INFO  nextflow.processor.TaskDispatcher - [6d/05577e] Submitted process > alignReads (2)
+May-13 20:02:59.962 [Actor Thread 6] INFO  nextflow.processor.TaskDispatcher - [d5/3acaa0] Submitted process > alignReads (3)
+May-13 20:02:59.998 [Actor Thread 19] INFO  nextflow.processor.TaskDispatcher - [d5/256563] Submitted process > alignReads (4)
+May-13 20:03:10.864 [Actor Thread 21] INFO  nextflow.processor.TaskDispatcher - [c8/78c0c2] Submitted process > alignReads (5)
+May-13 20:03:18.345 [Actor Thread 17] INFO  nextflow.processor.TaskDispatcher - [28/89634c] Submitted process > alignReads (6)
+May-13 20:03:18.577 [Actor Thread 25] INFO  nextflow.processor.TaskDispatcher - [58/f53653] Submitted process > reformat (5)
+May-13 20:03:18.585 [Actor Thread 13] INFO  nextflow.processor.TaskDispatcher - [df/d2497e] Submitted process > ssake (1)
+May-13 20:03:24.394 [Actor Thread 6] INFO  nextflow.processor.TaskDispatcher - [de/d82956] Submitted process > ssake (2)
+May-13 20:03:24.397 [Actor Thread 1] DEBUG nextflow.processor.TaskProcessor - <fastqToSsake> Sending poison pills and terminating process
+May-13 20:03:24.400 [Actor Thread 6] DEBUG n.processor.ParallelTaskProcessor - <reformat> Poison pill arrived
+May-13 20:03:24.400 [Actor Thread 26] DEBUG nextflow.processor.StateObj - <reformat> State before poison: StateObj[submitted: 8; completed: 4; poisoned: false; allScalar: false]
+May-13 20:03:24.401 [Actor Thread 1] DEBUG nextflow.Session - <<< barrier arrive (process: fastqToSsake)
+May-13 20:03:24.403 [Actor Thread 6] DEBUG n.processor.ParallelTaskProcessor - <fastqToSsake> After stop -- shareObjs [:]
+May-13 20:03:24.641 [Actor Thread 22] INFO  nextflow.processor.TaskDispatcher - [fd/9169f4] Submitted process > ssake (3)
+May-13 20:03:24.643 [Actor Thread 1] DEBUG nextflow.processor.TaskProcessor - <interleave> Sending poison pills and terminating process
+May-13 20:03:24.644 [Actor Thread 1] DEBUG nextflow.Session - <<< barrier arrive (process: interleave)
+May-13 20:03:24.644 [Actor Thread 22] DEBUG n.processor.ParallelTaskProcessor - <alignReads> Poison pill arrived
+May-13 20:03:24.644 [Actor Thread 26] DEBUG nextflow.processor.StateObj - <alignReads> State before poison: StateObj[submitted: 8; completed: 0; poisoned: false; allScalar: false]
+May-13 20:03:24.644 [Actor Thread 28] DEBUG n.processor.ParallelTaskProcessor - <interleave> After stop -- shareObjs [:]
+May-13 20:03:25.998 [Actor Thread 27] INFO  nextflow.processor.TaskDispatcher - [e4/c1191b] Submitted process > reformat (6)
+May-13 20:03:27.565 [Actor Thread 21] INFO  nextflow.processor.TaskDispatcher - [7b/ff0864] Submitted process > alignReads (7)
+May-13 20:03:39.558 [Actor Thread 25] INFO  nextflow.processor.TaskDispatcher - [56/32f338] Submitted process > ssake (4)
+May-13 20:03:39.566 [Actor Thread 17] INFO  nextflow.processor.TaskDispatcher - [6b/b176ee] Submitted process > reformat (7)
+May-13 20:03:45.760 [Actor Thread 13] INFO  nextflow.processor.TaskDispatcher - [cc/a903fb] Submitted process > reformat (8)
+May-13 20:03:50.422 [Actor Thread 6] INFO  nextflow.processor.TaskDispatcher - [92/3ca60f] Submitted process > alignReads (8)
+May-13 20:04:01.012 [Actor Thread 32] INFO  nextflow.processor.TaskDispatcher - [65/50e047] Submitted process > ssake (5)
+May-13 20:04:11.538 [Actor Thread 34] INFO  nextflow.processor.TaskDispatcher - [c6/a856e5] Submitted process > ssake (6)
+May-13 20:04:18.152 [Actor Thread 33] DEBUG nextflow.processor.TaskProcessor - <alignReads> Sending poison pills and terminating process
+May-13 20:04:18.152 [Actor Thread 33] DEBUG nextflow.Session - <<< barrier arrive (process: alignReads)
+May-13 20:04:18.153 [Actor Thread 32] DEBUG n.processor.ParallelTaskProcessor - <alignReads> After stop -- shareObjs [:]
+May-13 20:04:28.135 [Actor Thread 34] INFO  nextflow.processor.TaskDispatcher - [18/64820a] Submitted process > ssake (7)
+May-13 20:04:31.210 [Actor Thread 33] DEBUG nextflow.processor.TaskProcessor - <reformat> Sending poison pills and terminating process
+May-13 20:04:31.210 [Actor Thread 33] DEBUG nextflow.Session - <<< barrier arrive (process: reformat)
+May-13 20:04:31.210 [Actor Thread 34] DEBUG n.processor.ParallelTaskProcessor - <ssake> Poison pill arrived
+May-13 20:04:31.210 [Actor Thread 29] DEBUG nextflow.processor.StateObj - <ssake> State before poison: StateObj[submitted: 8; completed: 0; poisoned: false; allScalar: false]
+May-13 20:04:31.210 [Actor Thread 35] DEBUG n.processor.ParallelTaskProcessor - <reformat> After stop -- shareObjs [:]
+May-13 20:04:31.213 [Actor Thread 32] INFO  nextflow.processor.TaskDispatcher - [be/6dc6de] Submitted process > ssake (8)
+May-13 20:06:45.990 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 20:11:46.075 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 20:16:46.153 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 20:21:46.155 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 20:26:46.253 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 20:31:46.333 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 20:36:46.386 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 20:41:46.466 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 20:46:46.554 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 20:51:46.560 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 20:56:46.583 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 21:01:46.681 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 21:06:46.688 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 21:11:46.706 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 21:16:46.722 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 21:21:46.752 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 21:26:46.835 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 21:31:46.880 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 21:36:46.954 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 21:41:47.051 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 21:46:47.144 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 21:51:47.233 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 21:56:47.296 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 22:01:47.350 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 22:06:47.382 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 22:09:10.822 [Actor Thread 36] INFO  nextflow.processor.TaskDispatcher - [91/338692] Submitted process > alignContigs (1)
+May-13 22:11:47.401 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 22:12:44.149 [Actor Thread 38] INFO  nextflow.processor.TaskDispatcher - [b4/0ae074] Submitted process > alignContigs (2)
+May-13 22:15:55.052 [Actor Thread 40] INFO  nextflow.processor.TaskDispatcher - [23/2ffa8b] Submitted process > alignContigs (3)
+May-13 22:16:47.462 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 5 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 22:21:47.550 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 5 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 22:26:47.651 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 5 -- first: TaskHandler[id: 28; name: ssake (1); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/df/d2497e78594d4d345336f172aecf23]
+May-13 22:28:36.534 [Actor Thread 42] INFO  nextflow.processor.TaskDispatcher - [06/13fcfd] Submitted process > alignContigs (4)
+May-13 22:28:44.828 [Actor Thread 32] INFO  nextflow.processor.TaskDispatcher - [82/8be824] Submitted process > alignContigs (5)
+May-13 22:31:47.691 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- first: TaskHandler[id: 29; name: ssake (2); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/de/d8295606e474fd517481bb21158500]
+May-13 22:36:47.697 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- first: TaskHandler[id: 29; name: ssake (2); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/de/d8295606e474fd517481bb21158500]
+May-13 22:41:47.703 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- first: TaskHandler[id: 29; name: ssake (2); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/de/d8295606e474fd517481bb21158500]
+May-13 22:46:47.712 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- first: TaskHandler[id: 29; name: ssake (2); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/de/d8295606e474fd517481bb21158500]
+May-13 22:51:47.733 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- first: TaskHandler[id: 29; name: ssake (2); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/de/d8295606e474fd517481bb21158500]
+May-13 22:56:47.754 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- first: TaskHandler[id: 29; name: ssake (2); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/de/d8295606e474fd517481bb21158500]
+May-13 23:00:57.533 [Actor Thread 44] INFO  nextflow.processor.TaskDispatcher - [33/448dd7] Submitted process > alignContigs (6)
+May-13 23:01:47.762 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- first: TaskHandler[id: 29; name: ssake (2); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/de/d8295606e474fd517481bb21158500]
+May-13 23:06:47.775 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- first: TaskHandler[id: 29; name: ssake (2); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/de/d8295606e474fd517481bb21158500]
+May-13 23:11:47.786 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- first: TaskHandler[id: 29; name: ssake (2); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/de/d8295606e474fd517481bb21158500]
+May-13 23:12:33.190 [Actor Thread 46] INFO  nextflow.processor.TaskDispatcher - [9b/af5a40] Submitted process > alignContigs (7)
+May-13 23:16:47.863 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 39; name: ssake (7); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/18/64820a2c3c2e7ceb034414748a98be]
+May-13 23:21:47.962 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 39; name: ssake (7); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/18/64820a2c3c2e7ceb034414748a98be]
+May-13 23:26:48.003 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 39; name: ssake (7); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/18/64820a2c3c2e7ceb034414748a98be]
+May-13 23:31:48.016 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 39; name: ssake (7); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/18/64820a2c3c2e7ceb034414748a98be]
+May-13 23:36:48.030 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 39; name: ssake (7); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/18/64820a2c3c2e7ceb034414748a98be]
+May-13 23:41:48.124 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 39; name: ssake (7); status: RUNNING; exit: -; workDir: /scratch/tmp/flow/docker_18/work/18/64820a2c3c2e7ceb034414748a98be]
+May-13 23:42:02.549 [Actor Thread 45] DEBUG nextflow.processor.TaskProcessor - <ssake> Sending poison pills and terminating process
+May-13 23:42:02.549 [Actor Thread 45] DEBUG nextflow.Session - <<< barrier arrive (process: ssake)
+May-13 23:42:02.549 [Actor Thread 32] DEBUG n.processor.ParallelTaskProcessor - <alignContigs> Poison pill arrived
+May-13 23:42:02.550 [Actor Thread 50] DEBUG nextflow.processor.StateObj - <alignContigs> State before poison: StateObj[submitted: 8; completed: 7; poisoned: false; allScalar: false]
+May-13 23:42:02.555 [Actor Thread 49] DEBUG n.processor.ParallelTaskProcessor - <ssake> After stop -- shareObjs [:]
+May-13 23:42:02.556 [Actor Thread 48] INFO  nextflow.processor.TaskDispatcher - [18/c1897c] Submitted process > alignContigs (8)
+May-13 23:42:05.966 [Actor Thread 47] DEBUG nextflow.processor.TaskProcessor - <alignContigs> Sending poison pills and terminating process
+May-13 23:42:05.966 [Actor Thread 47] DEBUG nextflow.Session - <<< barrier arrive (process: alignContigs)
+May-13 23:42:05.967 [main] DEBUG nextflow.Session - Session await > processes completed
+May-13 23:42:05.967 [Actor Thread 32] DEBUG n.processor.ParallelTaskProcessor - <alignContigs> After stop -- shareObjs [:]
+May-13 23:42:05.967 [Thread-4] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+May-13 23:42:05.968 [main] DEBUG nextflow.Session - Session await > done
+May-13 23:42:05.968 [main] DEBUG nextflow.trace.TraceFileObserver - Flow completing -- flushing trace file
+May-13 23:42:05.974 [main] DEBUG nextflow.trace.TimelineObserver - Flow completing -- rendering html timeline
+May-13 23:42:06.029 [main] DEBUG nextflow.Session - Session destroyed

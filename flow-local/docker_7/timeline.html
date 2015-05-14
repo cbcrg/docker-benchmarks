@@ -1,0 +1,217 @@
+<!doctype html>
+<!--
+  ~ Copyright (c) 2013-2015, Centre for Genomic Regulation (CRG).
+  ~ Copyright (c) 2013-2015, Paolo Di Tommaso and the respective authors.
+  ~
+  ~   This file is part of 'Nextflow'.
+  ~
+  ~   Nextflow is free software: you can redistribute it and/or modify
+  ~   it under the terms of the GNU General Public License as published by
+  ~   the Free Software Foundation, either version 3 of the License, or
+  ~   (at your option) any later version.
+  ~
+  ~   Nextflow is distributed in the hope that it will be useful,
+  ~   but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~   GNU General Public License for more details.
+  ~
+  ~   You should have received a copy of the GNU General Public License
+  ~   along with Nextflow.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="http://www.nextflow.io/js/d3-timeline.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
+<style type="text/css">
+* {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.axis path,
+.axis line {
+fill: none;
+  stroke: black;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font-size: 10px;
+}
+
+div#timeline g text {
+  font-size: 13px;
+}
+
+text.timeline-label {
+  font-size: 13px;
+}
+
+#timeline2 .axis {
+  transform: translate(0px,30px);
+  -ms-transform: translate(0px,30px); /* IE 9 */
+  -webkit-transform: translate(0px,30px); /* Safari and Chrome */
+  -o-transform: translate(0px,30px); /* Opera */
+  -moz-transform: translate(0px,30px); /* Firefox */
+}
+
+.coloredDiv {
+  height:20px; width:20px; float:left;
+}
+
+#footer {
+  padding-top: 3em; color: #bfbfbf; font-size: 13px;
+}
+
+#footer a:visited {
+  color: #bfbfbf;
+  text-decoration: underline;
+}
+</style>
+<script type="text/javascript">
+var handler=null;
+// see https://github.com/mbostock/d3/wiki/Ordinal-Scales#category20c
+var colors = d3.scale.category20c().domain(d3.range(0,20)).range()
+
+function c1(index) { return "#bdbdbd"; }
+function c2(index) { return colors[index % 16]; } // <-- note: uses only the first 16 colors
+
+var elapsed="3h 42m 53s"
+var beginningMillis=1431513509987;
+var endingMillis=1431526883153;
+var data=[
+{"label": "fastqToSsake (4)", "times": [{"starting_time": 1431513510694, "ending_time": 1431513510732, "color":c1(0)}, {"starting_time": 1431513510732, "ending_time": 1431513526672, "color":c2(0), "label": "18.1s \/ 26 GB"}, {"starting_time": 1431513526672, "ending_time": 1431513528841, "color":c1(0)}]},
+{"label": "fastqToSsake (1)", "times": [{"starting_time": 1431513510692, "ending_time": 1431513510728, "color":c1(0)}, {"starting_time": 1431513510728, "ending_time": 1431513529820, "color":c2(0), "label": "29.2s \/ 26 GB"}, {"starting_time": 1431513529820, "ending_time": 1431513539922, "color":c1(0)}]},
+{"label": "fastqToSsake (7)", "times": [{"starting_time": 1431513510693, "ending_time": 1431513510729, "color":c1(0)}, {"starting_time": 1431513510729, "ending_time": 1431513528408, "color":c2(0), "label": "29.2s \/ 26 GB"}, {"starting_time": 1431513528408, "ending_time": 1431513539894, "color":c1(0)}]},
+{"label": "fastqToSsake (8)", "times": [{"starting_time": 1431513510689, "ending_time": 1431513510727, "color":c1(0)}, {"starting_time": 1431513510727, "ending_time": 1431513527702, "color":c2(0), "label": "29.2s \/ 26 GB"}, {"starting_time": 1431513527702, "ending_time": 1431513539880, "color":c1(0)}]},
+{"label": "fastqToSsake (2)", "times": [{"starting_time": 1431513510688, "ending_time": 1431513510823, "color":c1(0)}, {"starting_time": 1431513510823, "ending_time": 1431513531248, "color":c2(0), "label": "29.2s \/ 26 GB"}, {"starting_time": 1431513531248, "ending_time": 1431513539911, "color":c1(0)}]},
+{"label": "interleave (8)", "times": [{"starting_time": 1431513510691, "ending_time": 1431513510727, "color":c1(1)}, {"starting_time": 1431513510727, "ending_time": 1431513537098, "color":c2(1), "label": "36.7s \/ 26.1 GB"}, {"starting_time": 1431513537098, "ending_time": 1431513547418, "color":c1(1)}]},
+{"label": "interleave (4)", "times": [{"starting_time": 1431513510693, "ending_time": 1431513510731, "color":c1(1)}, {"starting_time": 1431513510731, "ending_time": 1431513542940, "color":c2(1), "label": "49.2s \/ 26.1 GB"}, {"starting_time": 1431513542940, "ending_time": 1431513559909, "color":c1(1)}]},
+{"label": "interleave (2)", "times": [{"starting_time": 1431513510695, "ending_time": 1431513510733, "color":c1(1)}, {"starting_time": 1431513510733, "ending_time": 1431513536170, "color":c2(1), "label": "39.2s \/ 26.1 GB"}, {"starting_time": 1431513536170, "ending_time": 1431513549913, "color":c1(1)}]},
+{"label": "interleave (1)", "times": [{"starting_time": 1431513510693, "ending_time": 1431513510730, "color":c1(1)}, {"starting_time": 1431513510730, "ending_time": 1431513536304, "color":c2(1), "label": "36.7s \/ 26.1 GB"}, {"starting_time": 1431513536304, "ending_time": 1431513547433, "color":c1(1)}]},
+{"label": "interleave (5)", "times": [{"starting_time": 1431513510689, "ending_time": 1431513510724, "color":c1(1)}, {"starting_time": 1431513510724, "ending_time": 1431513538563, "color":c2(1), "label": "49.4s \/ 26.1 GB"}, {"starting_time": 1431513538563, "ending_time": 1431513560096, "color":c1(1)}]},
+{"label": "interleave (7)", "times": [{"starting_time": 1431513528849, "ending_time": 1431513528953, "color":c1(1)}, {"starting_time": 1431513528953, "ending_time": 1431513558477, "color":c2(1), "label": "52.5s \/ 26.1 GB"}, {"starting_time": 1431513558477, "ending_time": 1431513581392, "color":c1(1)}]},
+{"label": "interleave (6)", "times": [{"starting_time": 1431513539881, "ending_time": 1431513539884, "color":c1(1)}, {"starting_time": 1431513539884, "ending_time": 1431513568517, "color":c2(1), "label": "1m 14s \/ 26.1 GB"}, {"starting_time": 1431513568517, "ending_time": 1431513614223, "color":c1(1)}]},
+{"label": "interleave (3)", "times": [{"starting_time": 1431513539894, "ending_time": 1431513539899, "color":c1(1)}, {"starting_time": 1431513539899, "ending_time": 1431513571529, "color":c2(1), "label": "1m 8s \/ 26.1 GB"}, {"starting_time": 1431513571529, "ending_time": 1431513608099, "color":c1(1)}]},
+{"label": "fastqToSsake (5)", "times": [{"starting_time": 1431513539911, "ending_time": 1431513539925, "color":c1(0)}, {"starting_time": 1431513539925, "ending_time": 1431513554996, "color":c2(0), "label": "49.8s \/ 26 GB"}, {"starting_time": 1431513554996, "ending_time": 1431513589698, "color":c1(0)}]},
+{"label": "fastqToSsake (6)", "times": [{"starting_time": 1431513539922, "ending_time": 1431513539925, "color":c1(0)}, {"starting_time": 1431513539925, "ending_time": 1431513557531, "color":c2(0), "label": "52.4s \/ 26 GB"}, {"starting_time": 1431513557531, "ending_time": 1431513592326, "color":c1(0)}]},
+{"label": "fastqToSsake (3)", "times": [{"starting_time": 1431513547421, "ending_time": 1431513547425, "color":c1(0)}, {"starting_time": 1431513547425, "ending_time": 1431513564934, "color":c2(0), "label": "42.8s \/ 26 GB"}, {"starting_time": 1431513564934, "ending_time": 1431513590229, "color":c1(0)}]},
+{"label": "reformat (1)", "times": [{"starting_time": 1431513547434, "ending_time": 1431513547436, "color":c1(2)}, {"starting_time": 1431513547436, "ending_time": 1431513558104, "color":c2(2), "label": "42.2s \/ 27.8 MB"}, {"starting_time": 1431513558104, "ending_time": 1431513589649, "color":c1(2)}]},
+{"label": "reformat (2)", "times": [{"starting_time": 1431513549914, "ending_time": 1431513549919, "color":c1(2)}, {"starting_time": 1431513549919, "ending_time": 1431513560277, "color":c2(2), "label": "39.7s \/ 27.8 MB"}, {"starting_time": 1431513560277, "ending_time": 1431513589657, "color":c1(2)}]},
+{"label": "reformat (3)", "times": [{"starting_time": 1431513559910, "ending_time": 1431513559913, "color":c1(2)}, {"starting_time": 1431513559913, "ending_time": 1431513570482, "color":c2(2), "label": "29.8s \/ 27.8 MB"}, {"starting_time": 1431513570482, "ending_time": 1431513589665, "color":c1(2)}]},
+{"label": "reformat (4)", "times": [{"starting_time": 1431513560097, "ending_time": 1431513560100, "color":c1(2)}, {"starting_time": 1431513560100, "ending_time": 1431513573697, "color":c2(2), "label": "29.6s \/ 27.8 MB"}, {"starting_time": 1431513573697, "ending_time": 1431513589705, "color":c1(2)}]},
+{"label": "reformat (5)", "times": [{"starting_time": 1431513581393, "ending_time": 1431513581396, "color":c1(2)}, {"starting_time": 1431513581396, "ending_time": 1431513594047, "color":c2(2), "label": "49.6s \/ 27.8 MB"}, {"starting_time": 1431513594047, "ending_time": 1431513631023, "color":c1(2)}]},
+{"label": "alignReads (1)", "times": [{"starting_time": 1431513589650, "ending_time": 1431513589653, "color":c1(3)}, {"starting_time": 1431513589653, "ending_time": 1431513589779, "color":c2(3), "label": "48s \/ 23.2 MB"}, {"starting_time": 1431513589779, "ending_time": 1431513637629, "color":c1(3)}]},
+{"label": "alignReads (2)", "times": [{"starting_time": 1431513589658, "ending_time": 1431513589660, "color":c1(3)}, {"starting_time": 1431513589660, "ending_time": 1431513589720, "color":c2(3), "label": "33.2s \/ 23.2 MB"}, {"starting_time": 1431513589720, "ending_time": 1431513622813, "color":c1(3)}]},
+{"label": "alignReads (3)", "times": [{"starting_time": 1431513589665, "ending_time": 1431513589701, "color":c1(3)}, {"starting_time": 1431513589701, "ending_time": 1431513589771, "color":c2(3), "label": "25.8s \/ 23.2 MB"}, {"starting_time": 1431513589771, "ending_time": 1431513615438, "color":c1(3)}]},
+{"label": "alignReads (4)", "times": [{"starting_time": 1431513589698, "ending_time": 1431513589701, "color":c1(3)}, {"starting_time": 1431513589701, "ending_time": 1431513631190, "color":c2(3), "label": "41.5s \/ -"}]},
+{"label": "alignReads (5)", "times": [{"starting_time": 1431513589706, "ending_time": 1431513589714, "color":c1(3)}, {"starting_time": 1431513589714, "ending_time": 1431513626747, "color":c2(3), "label": "37s \/ -"}]},
+{"label": "alignReads (6)", "times": [{"starting_time": 1431513590229, "ending_time": 1431513590232, "color":c1(3)}, {"starting_time": 1431513590232, "ending_time": 1431513639136, "color":c2(3), "label": "48.9s \/ -"}]},
+{"label": "ssake (1)", "times": [{"starting_time": 1431513592327, "ending_time": 1431513592330, "color":c1(4)}, {"starting_time": 1431513592330, "ending_time": 1431521537258, "color":c2(4), "label": "2h 13m 11s \/ 886.6 MB"}, {"starting_time": 1431521537258, "ending_time": 1431521582915, "color":c1(4)}]},
+{"label": "ssake (2)", "times": [{"starting_time": 1431513608101, "ending_time": 1431513608104, "color":c1(4)}, {"starting_time": 1431513608104, "ending_time": 1431521089956, "color":c2(4), "label": "2h 5m 22s \/ 859.2 MB"}, {"starting_time": 1431521089956, "ending_time": 1431521129855, "color":c1(4)}]},
+{"label": "ssake (3)", "times": [{"starting_time": 1431513614226, "ending_time": 1431513614231, "color":c1(4)}, {"starting_time": 1431513614231, "ending_time": 1431522227901, "color":c2(4), "label": "2h 23m 59s \/ 836.3 MB"}, {"starting_time": 1431522227901, "ending_time": 1431522252747, "color":c1(4)}]},
+{"label": "reformat (6)", "times": [{"starting_time": 1431513615439, "ending_time": 1431513615442, "color":c1(2)}, {"starting_time": 1431513615442, "ending_time": 1431513625204, "color":c2(2), "label": "46.6s \/ 27.8 MB"}, {"starting_time": 1431513625204, "ending_time": 1431513661993, "color":c1(2)}]},
+{"label": "ssake (4)", "times": [{"starting_time": 1431513622814, "ending_time": 1431513622816, "color":c1(4)}, {"starting_time": 1431513622816, "ending_time": 1431526850441, "color":c2(4), "label": "3h 40m 56s \/ 1.1 GB"}, {"starting_time": 1431526850441, "ending_time": 1431526878909, "color":c1(4)}]},
+{"label": "reformat (7)", "times": [{"starting_time": 1431513626749, "ending_time": 1431513626752, "color":c1(2)}, {"starting_time": 1431513626752, "ending_time": 1431513636637, "color":c2(2), "label": "35.3s \/ 27.8 MB"}, {"starting_time": 1431513636637, "ending_time": 1431513662000, "color":c1(2)}]},
+{"label": "reformat (8)", "times": [{"starting_time": 1431513631024, "ending_time": 1431513631027, "color":c1(2)}, {"starting_time": 1431513631027, "ending_time": 1431513642004, "color":c2(2), "label": "31s \/ 27.8 MB"}, {"starting_time": 1431513642004, "ending_time": 1431513662008, "color":c1(2)}]},
+{"label": "alignReads (7)", "times": [{"starting_time": 1431513631191, "ending_time": 1431513631194, "color":c1(3)}, {"starting_time": 1431513631194, "ending_time": 1431513631294, "color":c2(3), "label": "20.5s \/ 23.2 MB"}, {"starting_time": 1431513631294, "ending_time": 1431513651716, "color":c1(3)}]},
+{"label": "alignReads (8)", "times": [{"starting_time": 1431513637630, "ending_time": 1431513637634, "color":c1(3)}, {"starting_time": 1431513637634, "ending_time": 1431513637825, "color":c2(3), "label": "24.4s \/ 23.1 MB"}, {"starting_time": 1431513637825, "ending_time": 1431513661986, "color":c1(3)}]},
+{"label": "ssake (5)", "times": [{"starting_time": 1431513639137, "ending_time": 1431513639139, "color":c1(4)}, {"starting_time": 1431513639139, "ending_time": 1431524266408, "color":c2(4), "label": "2h 57m 23s \/ 981.2 MB"}, {"starting_time": 1431524266408, "ending_time": 1431524282273, "color":c1(4)}]},
+{"label": "ssake (6)", "times": [{"starting_time": 1431513661998, "ending_time": 1431513662004, "color":c1(4)}, {"starting_time": 1431513662004, "ending_time": 1431521359308, "color":c2(4), "label": "2h 8m 29s \/ 880.1 MB"}, {"starting_time": 1431521359308, "ending_time": 1431521371154, "color":c1(4)}]},
+{"label": "ssake (7)", "times": [{"starting_time": 1431513662006, "ending_time": 1431513662010, "color":c1(4)}, {"starting_time": 1431513662010, "ending_time": 1431522388462, "color":c2(4), "label": "2h 25m 37s \/ 872.3 MB"}, {"starting_time": 1431522388462, "ending_time": 1431522399385, "color":c1(4)}]},
+{"label": "ssake (8)", "times": [{"starting_time": 1431513662032, "ending_time": 1431513662109, "color":c1(4)}, {"starting_time": 1431513662109, "ending_time": 1431524871986, "color":c2(4), "label": "3h 7m 1s \/ 930.4 MB"}, {"starting_time": 1431524871986, "ending_time": 1431524883089, "color":c1(4)}]},
+{"label": "alignContigs (1)", "times": [{"starting_time": 1431521129889, "ending_time": 1431521129956, "color":c1(5)}, {"starting_time": 1431521129956, "ending_time": 1431521130011, "color":c2(5), "label": "4.3s \/ 23.2 MB"}, {"starting_time": 1431521130011, "ending_time": 1431521134172, "color":c1(5)}]},
+{"label": "alignContigs (2)", "times": [{"starting_time": 1431521371159, "ending_time": 1431521371253, "color":c1(5)}, {"starting_time": 1431521371253, "ending_time": 1431521371287, "color":c2(5), "label": "4.7s \/ 23.2 MB"}, {"starting_time": 1431521371287, "ending_time": 1431521375812, "color":c1(5)}]},
+{"label": "alignContigs (3)", "times": [{"starting_time": 1431521582921, "ending_time": 1431521583016, "color":c1(5)}, {"starting_time": 1431521583016, "ending_time": 1431521583051, "color":c2(5), "label": "4.2s \/ 23.2 MB"}, {"starting_time": 1431521583051, "ending_time": 1431521587092, "color":c1(5)}]},
+{"label": "alignContigs (4)", "times": [{"starting_time": 1431522252753, "ending_time": 1431522252847, "color":c1(5)}, {"starting_time": 1431522252847, "ending_time": 1431522252893, "color":c2(5), "label": "4.4s \/ 23.2 MB"}, {"starting_time": 1431522252893, "ending_time": 1431522257121, "color":c1(5)}]},
+{"label": "alignContigs (5)", "times": [{"starting_time": 1431522399390, "ending_time": 1431522399485, "color":c1(5)}, {"starting_time": 1431522399485, "ending_time": 1431522399532, "color":c2(5), "label": "3.6s \/ 23.2 MB"}, {"starting_time": 1431522399532, "ending_time": 1431522403003, "color":c1(5)}]},
+{"label": "alignContigs (6)", "times": [{"starting_time": 1431524282278, "ending_time": 1431524282373, "color":c1(5)}, {"starting_time": 1431524282373, "ending_time": 1431524282410, "color":c2(5), "label": "3.8s \/ 23.2 MB"}, {"starting_time": 1431524282410, "ending_time": 1431524286046, "color":c1(5)}]},
+{"label": "alignContigs (7)", "times": [{"starting_time": 1431524883097, "ending_time": 1431524883189, "color":c1(5)}, {"starting_time": 1431524883189, "ending_time": 1431524883230, "color":c2(5), "label": "3.5s \/ 23.2 MB"}, {"starting_time": 1431524883230, "ending_time": 1431524886573, "color":c1(5)}]},
+{"label": "alignContigs (8)", "times": [{"starting_time": 1431526878919, "ending_time": 1431526879010, "color":c1(5)}, {"starting_time": 1431526879010, "ending_time": 1431526879051, "color":c2(5), "label": "4.2s \/ 23.2 MB"}, {"starting_time": 1431526879051, "ending_time": 1431526883141, "color":c1(5)}]}
+]
+
+
+function getTickFormat() {
+  var MIN = 1000 * 60
+  var HOUR = MIN * 60
+  var DAY = HOUR * 24
+  var delta = (endingMillis - beginningMillis)
+
+  if( delta < 2 * MIN ) {
+    return {
+      format: d3.time.format("%S"),
+      tickTime: d3.time.seconds,
+      tickInterval: 5,
+      tickSize: 6
+    }
+  }
+
+  if( delta < 2 * HOUR ) {
+    return {
+      format: d3.time.format("%M"),
+      tickTime: d3.time.minutes,
+      tickInterval: 5,
+      tickSize: 6
+    }
+  }
+
+  if( delta < 2 * DAY ) {
+    return {
+      format: d3.time.format("%H"),
+      tickTime: d3.time.hours,
+      tickInterval: 5,
+      tickSize: 6
+    }
+  }
+
+  return {
+    format: d3.time.format("%b %e %H:%M"),
+    tickTime: d3.time.hours,
+    tickInterval: 6,
+    tickSize: 6
+  }
+}
+
+function render() {
+  handler=null;
+  $("#timeline").empty()
+  $('#label_elapsed').text(elapsed)
+  $('#label_launch').text( d3.time.format('%d %b %Y %H:%M')(new Date(beginningMillis)) )
+
+  var width = $(window).width();
+  var chart = d3.timeline()
+    .stack() // toggles graph stacking
+    .margin({left:150, right:100, top:0, bottom:0})
+    .tickFormat( getTickFormat() )
+    .rowSeperators('#f5f5f5')
+    ;
+  var svg = d3.select("#timeline").append("svg").attr("width", width).datum(data).call(chart);
+}
+
+function hrz() {
+if( handler != null ) clearTimeout(handler)
+  handler = setTimeout(render, 150);
+}
+
+$(document).ready(render)
+$(window).resize(hrz); // resize the applet on window resize
+</script>
+</head>
+
+<body>
+<div>
+  <h3>Processes execution timeline</h3>
+  <p>
+    Launch time: <span id='label_launch'> </span><br>
+    Elapsed time: <span id='label_elapsed'> </span>
+  </p>
+  <div id="timeline"></div>
+</div>
+
+<div id='footer'>
+  Created with Nextflow -- <a href='http://www.nextflow.io' target='_blank'>http://nextflow.io</a>
+</div>
+</body>
+</html>

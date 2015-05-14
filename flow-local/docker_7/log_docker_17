@@ -1,0 +1,83 @@
+N E X T F L O W  ~  version 0.13.4
+Launching ../main.nf
+[warm up] executor > local
+[63/e6f0b0] Submitted process > fastqToSsake (1)
+[ec/ee579e] Submitted process > fastqToSsake (2)
+[4a/fd6893] Submitted process > fastqToSsake (4)
+[3d/bfdf95] Submitted process > fastqToSsake (8)
+[bf/22e72f] Submitted process > interleave (8)
+[c1/8d875d] Submitted process > fastqToSsake (7)
+[ff/383aa6] Submitted process > interleave (4)
+[e8/3e9251] Submitted process > interleave (2)
+[18/7b9fd2] Submitted process > interleave (1)
+[75/366746] Submitted process > interleave (5)
+[d0/f8311a] Submitted process > interleave (7)
+[32/89196e] Submitted process > interleave (6)
+[ef/f73d38] Submitted process > interleave (3)
+[f3/2d3bb9] Submitted process > fastqToSsake (5)
+[8c/98f1ac] Submitted process > fastqToSsake (6)
+[92/8eff71] Submitted process > fastqToSsake (3)
+[78/1a24d3] Submitted process > reformat (1)
+[4d/9768eb] Submitted process > reformat (2)
+[a7/c9b92f] Submitted process > reformat (3)
+[13/1a14bf] Submitted process > reformat (4)
+[8b/c23d0d] Submitted process > reformat (5)
+[5a/d5e122] Submitted process > alignReads (1)
+[37/41d267] Submitted process > alignReads (2)
+[0c/ef9b89] Submitted process > alignReads (3)
+[de/5619b7] Submitted process > alignReads (4)
+[1c/236ca3] Submitted process > alignReads (5)
+[d0/3f014f] Submitted process > alignReads (6)
+[79/fcffda] Submitted process > ssake (1)
+[13/b45c30] Submitted process > ssake (2)
+[28/d9079a] Submitted process > ssake (3)
+[eb/1a1831] Submitted process > reformat (6)
+aligned reads [hla_sample_5, /scratch/tmp/flow/docker_17/work/0c/ef9b89e89ed0bf65cfd8a0ccf10472/hla_sample_5.reads.bwa.sorted.bam]
+reads vcf [hla_sample_5, /scratch/tmp/flow/docker_17/work/0c/ef9b89e89ed0bf65cfd8a0ccf10472/hla_sample_5.reads.bwa.sorted.vcf.gz]
+[22/250b3c] Submitted process > ssake (4)
+aligned reads [hla_sample_1, /scratch/tmp/flow/docker_17/work/37/41d2672ba6864b8d2a9e1759abc84c/hla_sample_1.reads.bwa.sorted.bam]
+reads vcf [hla_sample_1, /scratch/tmp/flow/docker_17/work/37/41d2672ba6864b8d2a9e1759abc84c/hla_sample_1.reads.bwa.sorted.vcf.gz]
+[95/c5dccc] Submitted process > reformat (7)
+aligned reads [hla_sample_7, /scratch/tmp/flow/docker_17/work/1c/236ca3a621ab02522c716a2b70eeea/hla_sample_7.reads.bwa.sorted.bam]
+reads vcf [hla_sample_7, /scratch/tmp/flow/docker_17/work/1c/236ca3a621ab02522c716a2b70eeea/hla_sample_7.reads.bwa.sorted.vcf.gz]
+[3b/241534] Submitted process > reformat (8)
+[62/723c52] Submitted process > alignReads (7)
+aligned reads [hla_sample_8, /scratch/tmp/flow/docker_17/work/de/5619b78ec53bf2d9c2ee77ee4b2cda/hla_sample_8.reads.bwa.sorted.bam]
+reads vcf [hla_sample_8, /scratch/tmp/flow/docker_17/work/de/5619b78ec53bf2d9c2ee77ee4b2cda/hla_sample_8.reads.bwa.sorted.vcf.gz]
+[a9/530369] Submitted process > alignReads (8)
+aligned reads [hla_sample_4, /scratch/tmp/flow/docker_17/work/5a/d5e122d2e5db1b5f9a74b161a15ed4/hla_sample_4.reads.bwa.sorted.bam]
+reads vcf [hla_sample_4, /scratch/tmp/flow/docker_17/work/5a/d5e122d2e5db1b5f9a74b161a15ed4/hla_sample_4.reads.bwa.sorted.vcf.gz]
+[de/b94d8e] Submitted process > ssake (5)
+aligned reads [hla_sample_6, /scratch/tmp/flow/docker_17/work/d0/3f014fe99c924e4700f2e85154c4fe/hla_sample_6.reads.bwa.sorted.bam]
+reads vcf [hla_sample_6, /scratch/tmp/flow/docker_17/work/d0/3f014fe99c924e4700f2e85154c4fe/hla_sample_6.reads.bwa.sorted.vcf.gz]
+aligned reads [hla_sample_2, /scratch/tmp/flow/docker_17/work/62/723c52672fadee6230ce9de4a1834a/hla_sample_2.reads.bwa.sorted.bam]
+reads vcf [hla_sample_2, /scratch/tmp/flow/docker_17/work/62/723c52672fadee6230ce9de4a1834a/hla_sample_2.reads.bwa.sorted.vcf.gz]
+aligned reads [hla_sample_3, /scratch/tmp/flow/docker_17/work/a9/530369967c6be16ff0b4d6fbbdf127/hla_sample_3.reads.bwa.sorted.bam]
+reads vcf [hla_sample_3, /scratch/tmp/flow/docker_17/work/a9/530369967c6be16ff0b4d6fbbdf127/hla_sample_3.reads.bwa.sorted.vcf.gz]
+[b8/7418af] Submitted process > ssake (6)
+[3f/252e3b] Submitted process > ssake (7)
+[12/205bcc] Submitted process > ssake (8)
+[3f/932e48] Submitted process > alignContigs (1)
+aligned contigs [hla_sample_4, /scratch/tmp/flow/docker_17/work/3f/932e48a6a77ff7b340a01a3b45a093/hla_sample_4.contigs.bwa.sorted.bam]
+contigs vcf [hla_sample_4, /scratch/tmp/flow/docker_17/work/3f/932e48a6a77ff7b340a01a3b45a093/hla_sample_4.contigs.bwa.sorted.vcf.gz]
+[3d/dc904c] Submitted process > alignContigs (2)
+contigs vcf [hla_sample_1, /scratch/tmp/flow/docker_17/work/3d/dc904c2bfd9e5db7690c595b581d7f/hla_sample_1.contigs.bwa.sorted.vcf.gz]
+aligned contigs [hla_sample_1, /scratch/tmp/flow/docker_17/work/3d/dc904c2bfd9e5db7690c595b581d7f/hla_sample_1.contigs.bwa.sorted.bam]
+[a0/7f8515] Submitted process > alignContigs (3)
+contigs vcf [hla_sample_5, /scratch/tmp/flow/docker_17/work/a0/7f851596083271a2a26f185c769edc/hla_sample_5.contigs.bwa.sorted.vcf.gz]
+aligned contigs [hla_sample_5, /scratch/tmp/flow/docker_17/work/a0/7f851596083271a2a26f185c769edc/hla_sample_5.contigs.bwa.sorted.bam]
+[0c/b0edff] Submitted process > alignContigs (4)
+contigs vcf [hla_sample_6, /scratch/tmp/flow/docker_17/work/0c/b0edfff0057070e90a7e81d41cb6b4/hla_sample_6.contigs.bwa.sorted.vcf.gz]
+aligned contigs [hla_sample_6, /scratch/tmp/flow/docker_17/work/0c/b0edfff0057070e90a7e81d41cb6b4/hla_sample_6.contigs.bwa.sorted.bam]
+[50/9c4195] Submitted process > alignContigs (5)
+aligned contigs [hla_sample_7, /scratch/tmp/flow/docker_17/work/50/9c419524b70bc8f8fb507a95145603/hla_sample_7.contigs.bwa.sorted.bam]
+contigs vcf [hla_sample_7, /scratch/tmp/flow/docker_17/work/50/9c419524b70bc8f8fb507a95145603/hla_sample_7.contigs.bwa.sorted.vcf.gz]
+[69/3ceded] Submitted process > alignContigs (6)
+aligned contigs [hla_sample_2, /scratch/tmp/flow/docker_17/work/69/3ceded27846feaa8bddee07810d48a/hla_sample_2.contigs.bwa.sorted.bam]
+contigs vcf [hla_sample_2, /scratch/tmp/flow/docker_17/work/69/3ceded27846feaa8bddee07810d48a/hla_sample_2.contigs.bwa.sorted.vcf.gz]
+[b8/f11964] Submitted process > alignContigs (7)
+aligned contigs [hla_sample_3, /scratch/tmp/flow/docker_17/work/b8/f119646c9c5687b3c713fed45ac078/hla_sample_3.contigs.bwa.sorted.bam]
+contigs vcf [hla_sample_3, /scratch/tmp/flow/docker_17/work/b8/f119646c9c5687b3c713fed45ac078/hla_sample_3.contigs.bwa.sorted.vcf.gz]
+[07/29848a] Submitted process > alignContigs (8)
+aligned contigs [hla_sample_8, /scratch/tmp/flow/docker_17/work/07/29848aad1311388fd357f318b2bed4/hla_sample_8.contigs.bwa.sorted.bam]
+contigs vcf [hla_sample_8, /scratch/tmp/flow/docker_17/work/07/29848aad1311388fd357f318b2bed4/hla_sample_8.contigs.bwa.sorted.vcf.gz]
