@@ -1,7 +1,7 @@
-Flow stats 
+Piper-nf stats 
 ================
 
-This folder contains the log files for the Flow pipeline executions. 
+This folder contains the log files for the Piper-NF pipeline executions. 
 
 To generate the figures use the `make` command. It creates the following 
 assets: 

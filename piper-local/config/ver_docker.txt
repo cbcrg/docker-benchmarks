@@ -1,0 +1,21 @@
+DOCKER  
+=======
+
+$ nextflow -c docker.config run ver.nf
+N E X T F L O W  ~  version 0.13.5
+Launching ver.nf
+[warm up] executor > local
+[7e/63dced] Submitted process > ver (1)
+PROGRAM: T-COFFEE Version_10.00.r1613 (2013-10-22 15:49:09 - Revision 1613 - Build 432)
+blastp: 2.2.29+
+Package: blast 2.2.29, build Dec 10 2013 14:41:40
+exonerate from exonerate version 2.2.0
+Using glib version 2.4.7
+Built on Oct 17 2008
+Branch: unnamed branch
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/blast/bin:/opt/exonerate/bin:/opt/tcoffee/bin:/opt/wu-blast
+DIR_4_TCOFFEE=/opt/tcoffee
+CACHE_4_TCOFFEE=/tmp/cache/
+EMAIL_4_TCOFFEE=tcoffee.msa@gmail.com
+LOCKDIR_4_TCOFFEE=/tmp/lck/
+TMP_4_TCOFFEE=/tmp/tmp/

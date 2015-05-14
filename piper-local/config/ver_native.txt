@@ -1,0 +1,21 @@
+NATIVE
+=======
+
+$ nextflow -c native.config run ver.nf 
+N E X T F L O W  ~  version 0.13.5
+Launching ver.nf
+[warm up] executor > local
+[6f/996ca7] Submitted process > ver (1)
+PROGRAM: T-COFFEE Version_10.00.r1613 (2013-10-22 15:49:09 - Revision 1613 - Build 432)
+blastp: 2.2.29+
+Package: blast 2.2.29, build Dec 10 2013 14:41:40
+exonerate from exonerate version 2.2.0
+Using glib version 2.4.7
+Built on Oct 17 2008
+Branch: unnamed branch
+/scratch/tmp/piper/tcoffee_10.00.r1613/bin:/scratch/tmp/piper/ncbi-blast-2.2.29+/bin:/software/as/el6.5/modules/Modules/3.2.10/bin/:/users/cn/ptommaso/cirrus/tools/bin:/users/cn/ptommaso/bin:/users/cn/ptommaso/tools/groovy/bin:/users/cn/ptommaso/jdk1.8.0_40/bin:/users/cn/ptommaso/tcoffee/Version_11.00.fb59e64/bin:/users/cn/ptommaso/tools/s3cmd:/usr/share/univage/bin/lx-amd64:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/lib64/openmpi/bin/:/usr/lib64/compat-openmpi/bin/:/software/cn/bin:/software/cn/FC12-x86_64/bin
+DIR_4_TCOFFEE=/scratch/tmp/piper/tcoffee_10.00.r1613
+CACHE_4_TCOFFEE=/nfs/users/cn/ptommaso/.t_coffee/cache/
+EMAIL_4_TCOFFEE=paolo.ditommaso@gmail.com
+LOCKDIR_4_TCOFFEE=/tmp/tc/lck/
+TMP_4_TCOFFEE=/tmp/tc/tmp/
