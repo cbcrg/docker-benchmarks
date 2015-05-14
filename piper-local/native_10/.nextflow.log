@@ -1,0 +1,444 @@
+May-10 13:06:09.276 [main] DEBUG nextflow.cli.Launcher - $> /users/cn/ptommaso/bin/nextflow -c ../native.config run ../piper-nf
+May-10 13:06:09.332 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 0.14.0-SNAPSHOT
+May-10 13:06:09.642 [main] INFO  nextflow.cli.CmdRun - Launching ../piper-nf/piper.nf
+May-10 13:06:09.650 [main] DEBUG nextflow.script.ConfigBuilder - Found config base: /scratch/tmp/piper/piper-nf/nextflow.config
+May-10 13:06:09.652 [main] DEBUG nextflow.script.ConfigBuilder - User config file: ../native.config
+May-10 13:06:09.653 [main] DEBUG nextflow.script.ConfigBuilder - Parsing config file: /scratch/tmp/piper/piper-nf/nextflow.config
+May-10 13:06:09.654 [main] DEBUG nextflow.script.ConfigBuilder - Parsing config file: /scratch/tmp/piper/native.config
+May-10 13:06:09.771 [main] DEBUG nextflow.Session - Session uuid: 4daed7e4-3c32-491d-b591-649c41eeb484
+May-10 13:06:09.773 [main] DEBUG nextflow.Session - Executor pool size: 11
+May-10 13:06:09.790 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 0.14.0-SNAPSHOT build 3020
+  Modified: 09-05-2015 21:15 UTC (23:15 CEST)
+  System: Linux 2.6.32-431.29.2.el6.x86_64
+  Runtime: Groovy 2.4.3 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_40-b26
+  Encoding: UTF-8 (UTF-8)
+  Process: 26871@node-hp0001cn.linux.crg.es [172.21.11.104]
+
+May-10 13:06:09.819 [main] DEBUG nextflow.Session - Session start invoked
+May-10 13:06:09.819 [main] DEBUG nextflow.Session - Registering observer: nextflow.trace.TraceFileObserver
+May-10 13:06:09.820 [main] DEBUG nextflow.Session - Registering observer: nextflow.trace.TimelineObserver
+May-10 13:06:09.823 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+May-10 13:06:09.824 [main] DEBUG nextflow.trace.TraceFileObserver - Flow starting -- trace file: /scratch/tmp/piper/native_30/trace.csv
+May-10 13:06:09.834 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+May-10 13:06:10.187 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+May-10 13:06:10.204 [main] INFO  nextflow.Nextflow - Using genomes-db path: /scratch/tmp/piper/native_30/db
+May-10 13:06:10.204 [main] INFO  nextflow.Nextflow - P I P E R - RNA mapping pipeline - ver 1.4.2
+May-10 13:06:10.204 [main] INFO  nextflow.Nextflow - ============================================
+May-10 13:06:10.204 [main] INFO  nextflow.Nextflow - query               : /scratch/tmp/piper/chicken/query100.fa
+May-10 13:06:10.204 [main] INFO  nextflow.Nextflow - genomes-db          : /scratch/tmp/piper/native_30/db
+May-10 13:06:10.205 [main] INFO  nextflow.Nextflow - query-chunk-size    : 1000
+May-10 13:06:10.205 [main] INFO  nextflow.Nextflow - genomes-file        : ../chicken/genomes.txt
+May-10 13:06:10.205 [main] INFO  nextflow.Nextflow - genomes-list        : -
+May-10 13:06:10.205 [main] INFO  nextflow.Nextflow - genomes-folder      : /scratch/tmp/piper/piper-nf/tutorial/genomes/
+May-10 13:06:10.205 [main] INFO  nextflow.Nextflow - result-dir          : result
+May-10 13:06:10.205 [main] INFO  nextflow.Nextflow - blast-strategy      : ncbi-blast
+May-10 13:06:10.205 [main] INFO  nextflow.Nextflow - align-strategy      : slow_pair
+May-10 13:06:10.205 [main] INFO  nextflow.Nextflow - exonerate-success:  : 1
+May-10 13:06:10.205 [main] INFO  nextflow.Nextflow - exonerate-mode:     : 1000
+May-10 13:06:10.206 [main] INFO  nextflow.Nextflow - exonerate-chunk-size: 2500
+May-10 13:06:10.206 [main] INFO  nextflow.Nextflow - repeat-cov          : 20
+May-10 13:06:10.206 [main] INFO  nextflow.Nextflow - 
+
+May-10 13:06:10.212 [main] INFO  nextflow.Nextflow - Validating genome: gen1 -- file: /scratch/tmp/piper/chicken/genomes/Anas_platyrhynchos.BGI_duck_1.0.73.dna_sm.fa
+May-10 13:06:10.213 [main] INFO  nextflow.Nextflow - Validating genome: gen2 -- file: /scratch/tmp/piper/chicken/genomes/Anolis_carolinensis.AnoCar2.0.73.dna_sm.fa
+May-10 13:06:10.213 [main] INFO  nextflow.Nextflow - Validating genome: gen3 -- file: /scratch/tmp/piper/chicken/genomes/Chrysemys_picta_bellii.ChrPicBel3.0.1.dna_rm.toplevel.fa
+May-10 13:06:10.213 [main] INFO  nextflow.Nextflow - Validating genome: gen4 -- file: /scratch/tmp/piper/chicken/genomes/Ficedula_albicollis.FicAlb_1.4.73.dna_sm.fa
+May-10 13:06:10.213 [main] INFO  nextflow.Nextflow - Validating genome: gen5 -- file: /scratch/tmp/piper/chicken/genomes/Gallus_gallus.Galgal4.73.dna_sm.fa
+May-10 13:06:10.214 [main] INFO  nextflow.Nextflow - Validating genome: gen6 -- file: /scratch/tmp/piper/chicken/genomes/Meleagris_gallopavo.UMD2.73.dna_sm.fa
+May-10 13:06:10.214 [main] INFO  nextflow.Nextflow - Validating genome: gen7 -- file: /scratch/tmp/piper/chicken/genomes/melobsittacus_undulatus_sm.fa
+May-10 13:06:10.214 [main] INFO  nextflow.Nextflow - Validating genome: gen8 -- file: /scratch/tmp/piper/chicken/genomes/Pelodiscus_sinensis.PelSin_1.0.73.dna_sm.fa
+May-10 13:06:10.214 [main] INFO  nextflow.Nextflow - Validating genome: gen9 -- file: /scratch/tmp/piper/chicken/genomes/Taeniopygia_guttata.taeGut3.2.4.73.dna_sm.fa
+May-10 13:06:10.229 [main] INFO  nextflow.Nextflow - Splitting query file: /scratch/tmp/piper/chicken/query100.fa ..
+May-10 13:06:10.253 [main] INFO  nextflow.Nextflow - Created 1 input chunks to path: /scratch/tmp/piper/native_30/work/fb/8af9fd986bcf74061da5a92ff3c706
+May-10 13:06:10.256 [main] DEBUG nextflow.Nextflow - Queries entries path: /scratch/tmp/piper/native_30/work/21/df964efa02bfe10bdf4d91543def1a
+May-10 13:06:10.262 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.134325.13
+May-10 13:06:10.263 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.136076.4
+May-10 13:06:10.264 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.97297.3
+May-10 13:06:10.265 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.136141.1
+May-10 13:06:10.265 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.129626.3
+May-10 13:06:10.266 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.115238.2
+May-10 13:06:10.267 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.133681.2
+May-10 13:06:10.267 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.135245.1
+May-10 13:06:10.268 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.56802.2
+May-10 13:06:10.269 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.32777.3
+May-10 13:06:10.270 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.13755.2
+May-10 13:06:10.270 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.59977.12
+May-10 13:06:10.271 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.126783.5
+May-10 13:06:10.272 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.77894.3
+May-10 13:06:10.273 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.65550.2
+May-10 13:06:10.274 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.101994.1
+May-10 13:06:10.275 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.8501.3
+May-10 13:06:10.275 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.27382.4
+May-10 13:06:10.276 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.134757.11
+May-10 13:06:10.277 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.138219.10
+May-10 13:06:10.277 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.134439.18
+May-10 13:06:10.277 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.133652.2
+May-10 13:06:10.278 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.85960.1
+May-10 13:06:10.279 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.118232.3
+May-10 13:06:10.279 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.131239.6
+May-10 13:06:10.280 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.87653.4
+May-10 13:06:10.280 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.4543.4
+May-10 13:06:10.281 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.99724.4
+May-10 13:06:10.281 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.4769.1
+May-10 13:06:10.282 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.135028.4
+May-10 13:06:10.282 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.116758.2
+May-10 13:06:10.283 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.80492.2
+May-10 13:06:10.283 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.8997.5
+May-10 13:06:10.284 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.134434.3
+May-10 13:06:10.284 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.134129.2
+May-10 13:06:10.285 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.133918.14
+May-10 13:06:10.285 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.135846.18
+May-10 13:06:10.285 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.136444.9
+May-10 13:06:10.286 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.96472.3
+May-10 13:06:10.286 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.9164.2
+May-10 13:06:10.287 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.139010.2
+May-10 13:06:10.287 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.100862.2
+May-10 13:06:10.288 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.138029.20
+May-10 13:06:10.288 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.58891.1
+May-10 13:06:10.289 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.136709.2
+May-10 13:06:10.289 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.134186.2
+May-10 13:06:10.290 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.61059.1
+May-10 13:06:10.290 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.136598.11
+May-10 13:06:10.291 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.136152.3
+May-10 13:06:10.291 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.81515.1
+May-10 13:06:10.300 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.136249.1
+May-10 13:06:10.301 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.135028.2
+May-10 13:06:10.302 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.105879.4
+May-10 13:06:10.302 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.136088.27
+May-10 13:06:10.303 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.87653.2
+May-10 13:06:10.303 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.110871.1
+May-10 13:06:10.304 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.29702.1
+May-10 13:06:10.304 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.22618.3
+May-10 13:06:10.305 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.136404.9
+May-10 13:06:10.305 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.6498.2
+May-10 13:06:10.306 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.133314.2
+May-10 13:06:10.306 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.84475.3
+May-10 13:06:10.307 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.42845.2
+May-10 13:06:10.308 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.53356.1
+May-10 13:06:10.309 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.93615.1
+May-10 13:06:10.309 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.131156.6
+May-10 13:06:10.309 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.137452.5
+May-10 13:06:10.310 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.61358.1
+May-10 13:06:10.310 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.130731.4
+May-10 13:06:10.311 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.132887.3
+May-10 13:06:10.311 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.74717.1
+May-10 13:06:10.312 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.9801.1
+May-10 13:06:10.312 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.94004.1
+May-10 13:06:10.313 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.137974.6
+May-10 13:06:10.313 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.132201.1
+May-10 13:06:10.314 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.78783.3
+May-10 13:06:10.314 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.146412.1
+May-10 13:06:10.314 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.57194.1
+May-10 13:06:10.315 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.75286.1
+May-10 13:06:10.315 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.28328.3
+May-10 13:06:10.315 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.136398.2
+May-10 13:06:10.316 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.131175.2
+May-10 13:06:10.316 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.133918.13
+May-10 13:06:10.317 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.134701.1
+May-10 13:06:10.317 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.137696.7
+May-10 13:06:10.317 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.132016.3
+May-10 13:06:10.318 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.102.1
+May-10 13:06:10.318 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.68537.1
+May-10 13:06:10.319 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.138101.3
+May-10 13:06:10.319 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.88621.1
+May-10 13:06:10.319 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.133853.4
+May-10 13:06:10.320 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.94730.1
+May-10 13:06:10.320 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.71472.2
+May-10 13:06:10.321 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.130784.1
+May-10 13:06:10.321 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.115782.2
+May-10 13:06:10.321 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.142223.2
+May-10 13:06:10.322 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.131956.2
+May-10 13:06:10.322 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.128925.1
+May-10 13:06:10.323 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.101790.1
+May-10 13:06:10.323 [main] DEBUG nextflow.Nextflow - Query entry id: CUFF.138245.15
+May-10 13:06:10.475 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+May-10 13:06:10.475 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+May-10 13:06:10.482 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+May-10 13:06:10.484 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+May-10 13:06:10.490 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'local' > capacity: 10; pollInterval: 100ms; dumpInterval: 5m 
+May-10 13:06:10.496 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: TaskPollingMonitor
+May-10 13:06:10.496 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+May-10 13:06:10.502 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+May-10 13:06:10.518 [main] DEBUG nextflow.Session - >>> barrier register (process: formatBlast)
+May-10 13:06:10.521 [main] DEBUG nextflow.script.BaseParam - output > channel unknown: fmtBlastOut -- creating a new instance
+May-10 13:06:10.533 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > formatBlast -- maxForks: 11
+May-10 13:06:10.541 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+May-10 13:06:10.541 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+May-10 13:06:10.541 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+May-10 13:06:10.541 [main] DEBUG nextflow.Session - >>> barrier register (process: formatChr)
+May-10 13:06:10.541 [main] DEBUG nextflow.script.BaseParam - output > channel unknown: fmtChrOut -- creating a new instance
+May-10 13:06:10.545 [Actor Thread 3] DEBUG n.processor.ParallelTaskProcessor - <formatBlast> Poison pill arrived
+May-10 13:06:10.546 [Actor Thread 1] DEBUG nextflow.processor.StateObj - <formatBlast> State before poison: StateObj[submitted: 9; completed: 0; poisoned: false; allScalar: false]
+May-10 13:06:10.548 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > formatChr -- maxForks: 11
+May-10 13:06:10.573 [Actor Thread 3] DEBUG n.processor.ParallelTaskProcessor - <formatChr> Poison pill arrived
+May-10 13:06:10.574 [Actor Thread 1] DEBUG nextflow.processor.StateObj - <formatChr> State before poison: StateObj[submitted: 9; completed: 0; poisoned: false; allScalar: false]
+May-10 13:06:10.582 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+May-10 13:06:10.583 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+May-10 13:06:10.583 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+May-10 13:06:10.583 [main] DEBUG nextflow.Session - >>> barrier register (process: blast)
+May-10 13:06:10.583 [main] DEBUG nextflow.script.BaseParam - output > channel unknown: blast_result -- creating a new instance
+May-10 13:06:10.597 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > blast -- maxForks: 11
+May-10 13:06:10.613 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+May-10 13:06:10.613 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+May-10 13:06:10.613 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+May-10 13:06:10.614 [main] DEBUG nextflow.Session - >>> barrier register (process: exonerate)
+May-10 13:06:10.614 [main] DEBUG nextflow.script.BaseParam - output > channel unknown: exonerate_out -- creating a new instance
+May-10 13:06:10.624 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > exonerate -- maxForks: 11
+May-10 13:06:10.644 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+May-10 13:06:10.644 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+May-10 13:06:10.644 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+May-10 13:06:10.644 [main] DEBUG nextflow.Session - >>> barrier register (process: normExonerate)
+May-10 13:06:10.644 [main] DEBUG nextflow.script.BaseParam - output > channel unknown: normalizedGtf -- creating a new instance
+May-10 13:06:10.644 [main] DEBUG nextflow.script.BaseParam - output > channel unknown: normalizedFasta -- creating a new instance
+May-10 13:06:10.650 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > normExonerate -- maxForks: 11
+May-10 13:06:10.677 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+May-10 13:06:10.677 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+May-10 13:06:10.677 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+May-10 13:06:10.677 [main] DEBUG nextflow.Session - >>> barrier register (process: similarity)
+May-10 13:06:10.677 [main] DEBUG nextflow.script.BaseParam - output > channel unknown: similarity -- creating a new instance
+May-10 13:06:10.684 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > similarity -- maxForks: 11
+May-10 13:06:10.707 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+May-10 13:06:10.707 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+May-10 13:06:10.707 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+May-10 13:06:10.708 [main] DEBUG nextflow.Session - >>> barrier register (process: matrix)
+May-10 13:06:10.708 [main] DEBUG nextflow.script.BaseParam - output > channel unknown: simMatrix -- creating a new instance
+May-10 13:06:10.716 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > matrix -- maxForks: 11
+May-10 13:06:10.717 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+May-10 13:06:10.718 [main] DEBUG nextflow.Session - Session await
+May-10 13:06:10.724 [Actor Thread 20] INFO  nextflow.processor.TaskDispatcher - [e0/c0f945] Submitted process > formatChr (9)
+May-10 13:06:10.724 [Actor Thread 15] INFO  nextflow.processor.TaskDispatcher - [8a/5a8ea8] Submitted process > formatChr (4)
+May-10 13:06:10.724 [Actor Thread 9] INFO  nextflow.processor.TaskDispatcher - [be/961e22] Submitted process > formatBlast (7)
+May-10 13:06:10.725 [Actor Thread 7] INFO  nextflow.processor.TaskDispatcher - [37/165dc7] Submitted process > formatBlast (5)
+May-10 13:06:10.725 [Actor Thread 11] INFO  nextflow.processor.TaskDispatcher - [74/0a72bd] Submitted process > formatBlast (9)
+May-10 13:06:10.725 [Actor Thread 19] INFO  nextflow.processor.TaskDispatcher - [12/99fb32] Submitted process > formatChr (8)
+May-10 13:06:10.725 [Actor Thread 5] INFO  nextflow.processor.TaskDispatcher - [ec/2733bf] Submitted process > formatBlast (3)
+May-10 13:06:10.725 [Actor Thread 6] INFO  nextflow.processor.TaskDispatcher - [96/7ed5d1] Submitted process > formatBlast (4)
+May-10 13:06:10.726 [Actor Thread 18] INFO  nextflow.processor.TaskDispatcher - [08/0dd709] Submitted process > formatChr (7)
+May-10 13:06:10.726 [Actor Thread 13] INFO  nextflow.processor.TaskDispatcher - [c1/d86598] Submitted process > formatChr (2)
+May-10 13:06:21.865 [Actor Thread 2] INFO  nextflow.processor.TaskDispatcher - [d1/1dd0bc] Submitted process > formatBlast (2)
+May-10 13:06:47.372 [Actor Thread 17] INFO  nextflow.processor.TaskDispatcher - [4b/ca3a70] Submitted process > formatChr (6)
+May-10 13:06:47.387 [Actor Thread 8] INFO  nextflow.processor.TaskDispatcher - [b4/77d9b3] Submitted process > formatBlast (6)
+May-10 13:06:47.411 [Actor Thread 16] INFO  nextflow.processor.TaskDispatcher - [e1/543327] Submitted process > formatChr (5)
+May-10 13:06:47.415 [Actor Thread 10] INFO  nextflow.processor.TaskDispatcher - [49/5f146f] Submitted process > formatBlast (8)
+May-10 13:06:52.394 [Actor Thread 12] INFO  nextflow.processor.TaskDispatcher - [c5/f0aad9] Submitted process > formatChr (1)
+May-10 13:07:03.126 [Actor Thread 14] INFO  nextflow.processor.TaskDispatcher - [82/dfc261] Submitted process > formatChr (3)
+May-10 13:07:23.776 [Actor Thread 4] INFO  nextflow.processor.TaskDispatcher - [9c/cf7f61] Submitted process > formatBlast (1)
+May-10 13:07:24.293 [Actor Thread 8] INFO  nextflow.processor.TaskDispatcher - [d4/1380a0] Submitted process > blast (1)
+May-10 13:07:30.848 [Actor Thread 16] INFO  nextflow.processor.TaskDispatcher - [52/7bac03] Submitted process > blast (2)
+May-10 13:07:36.605 [Actor Thread 10] INFO  nextflow.processor.TaskDispatcher - [0a/5972df] Submitted process > blast (3)
+May-10 13:07:42.296 [Actor Thread 12] INFO  nextflow.processor.TaskDispatcher - [33/01fc60] Submitted process > blast (4)
+May-10 13:07:47.869 [Actor Thread 14] INFO  nextflow.processor.TaskDispatcher - [95/2ddd1b] Submitted process > blast (5)
+May-10 13:07:48.208 [Actor Thread 8] INFO  nextflow.processor.TaskDispatcher - [1c/c70e06] Submitted process > blast (6)
+May-10 13:07:53.364 [Actor Thread 14] INFO  nextflow.processor.TaskDispatcher - [3d/63ad8b] Submitted process > exonerate (1)
+May-10 13:07:53.370 [Actor Thread 8] INFO  nextflow.processor.TaskDispatcher - [38/9fdaab] Submitted process > blast (7)
+May-10 13:07:53.888 [Actor Thread 25] INFO  nextflow.processor.TaskDispatcher - [6f/ed9f45] Submitted process > exonerate (2)
+May-10 13:07:54.123 [Actor Thread 25] INFO  nextflow.processor.TaskDispatcher - [5a/bda571] Submitted process > exonerate (4)
+May-10 13:08:04.175 [Actor Thread 8] INFO  nextflow.processor.TaskDispatcher - [b7/0f7653] Submitted process > exonerate (3)
+May-10 13:08:04.539 [Actor Thread 8] INFO  nextflow.processor.TaskDispatcher - [3e/5864b4] Submitted process > exonerate (5)
+May-10 13:08:05.848 [Actor Thread 28] INFO  nextflow.processor.TaskDispatcher - [a4/1b54d6] Submitted process > exonerate (7)
+May-10 13:08:13.759 [Actor Thread 30] INFO  nextflow.processor.TaskDispatcher - [3c/a0983a] Submitted process > exonerate (6)
+May-10 13:08:21.312 [Actor Thread 27] DEBUG nextflow.processor.TaskProcessor - <formatBlast> Sending poison pills and terminating process
+May-10 13:08:21.313 [Actor Thread 28] INFO  nextflow.processor.TaskDispatcher - [1a/6d23a2] Submitted process > blast (8)
+May-10 13:08:21.314 [Actor Thread 27] DEBUG nextflow.Session - <<< barrier arrive (process: formatBlast)
+May-10 13:08:21.315 [Actor Thread 31] DEBUG n.processor.ParallelTaskProcessor - <formatBlast> After stop -- shareObjs [:]
+May-10 13:08:21.316 [Actor Thread 33] DEBUG n.processor.ParallelTaskProcessor - <blast> Poison pill arrived
+May-10 13:08:21.316 [Actor Thread 27] DEBUG nextflow.processor.StateObj - <blast> State before poison: StateObj[submitted: 9; completed: 7; poisoned: false; allScalar: false]
+May-10 13:08:21.691 [Actor Thread 8] INFO  nextflow.processor.TaskDispatcher - [96/df99c6] Submitted process > exonerate (8)
+May-10 13:08:26.006 [Actor Thread 30] INFO  nextflow.processor.TaskDispatcher - [fa/f755bb] Submitted process > blast (9)
+May-10 13:08:27.129 [Actor Thread 33] INFO  nextflow.processor.TaskDispatcher - [c5/4082ff] Submitted process > normExonerate (1)
+May-10 13:08:27.132 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.88621.1
+May-10 13:08:27.135 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.94730.1
+May-10 13:08:27.137 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.71472.2
+May-10 13:08:27.137 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.115782.2
+May-10 13:08:27.138 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.142223.2
+May-10 13:08:27.138 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.128925.1
+May-10 13:08:27.138 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.101790.1
+May-10 13:08:27.147 [Actor Thread 8] INFO  nextflow.processor.TaskDispatcher - [dc/19ab0b] Submitted process > normExonerate (2)
+May-10 13:08:27.147 [pool-1-thread-5] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.115238.2
+May-10 13:08:27.147 [pool-1-thread-5] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.13755.2
+May-10 13:08:27.148 [pool-1-thread-5] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.77894.3
+May-10 13:08:27.148 [pool-1-thread-5] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.71472.2
+May-10 13:08:27.148 [pool-1-thread-5] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.128925.1
+May-10 13:08:27.266 [Actor Thread 33] INFO  nextflow.processor.TaskDispatcher - [40/b40022] Submitted process > exonerate (9)
+May-10 13:08:31.874 [Actor Thread 27] DEBUG nextflow.processor.TaskProcessor - <blast> Sending poison pills and terminating process
+May-10 13:08:31.874 [Actor Thread 27] DEBUG nextflow.Session - <<< barrier arrive (process: blast)
+May-10 13:08:31.874 [Actor Thread 28] DEBUG n.processor.ParallelTaskProcessor - <blast> After stop -- shareObjs [:]
+May-10 13:08:31.904 [Actor Thread 30] INFO  nextflow.processor.TaskDispatcher - [90/e1b1f3] Submitted process > exonerate (10)
+May-10 13:08:33.620 [Actor Thread 33] INFO  nextflow.processor.TaskDispatcher - [9b/0b0566] Submitted process > normExonerate (3)
+May-10 13:08:33.620 [pool-1-thread-10] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.42845.2
+May-10 13:08:33.620 [pool-1-thread-10] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.128925.1
+May-10 13:08:38.958 [Actor Thread 33] INFO  nextflow.processor.TaskDispatcher - [2d/ae9f40] Submitted process > normExonerate (4)
+May-10 13:08:38.958 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.13755.2
+May-10 13:08:38.959 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.77894.3
+May-10 13:08:38.959 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.132887.3
+May-10 13:08:38.959 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.115782.2
+May-10 13:08:38.960 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.128925.1
+May-10 13:08:42.984 [Actor Thread 8] INFO  nextflow.processor.TaskDispatcher - [a1/a762d6] Submitted process > normExonerate (5)
+May-10 13:09:03.817 [Actor Thread 35] INFO  nextflow.processor.TaskDispatcher - [06/550464] Submitted process > normExonerate (6)
+May-10 13:09:03.818 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.87653.2
+May-10 13:09:03.818 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.6498.2
+May-10 13:09:03.818 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.42845.2
+May-10 13:09:03.818 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.102.1
+May-10 13:09:03.819 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.88621.1
+May-10 13:09:03.819 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.128925.1
+May-10 13:09:03.819 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.101790.1
+May-10 13:10:54.784 [Actor Thread 38] INFO  nextflow.processor.TaskDispatcher - [50/ce4617] Submitted process > normExonerate (7)
+May-10 13:10:54.784 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.129626.3
+May-10 13:10:54.785 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.115238.2
+May-10 13:10:54.785 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.56802.2
+May-10 13:10:54.786 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.32777.3
+May-10 13:10:54.786 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.59977.12
+May-10 13:10:54.787 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.126783.5
+May-10 13:10:54.787 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.77894.3
+May-10 13:10:54.788 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.101994.1
+May-10 13:10:54.788 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.8501.3
+May-10 13:10:54.789 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.27382.4
+May-10 13:10:54.789 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.134439.18
+May-10 13:10:54.789 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.85960.1
+May-10 13:10:54.790 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.118232.3
+May-10 13:10:54.790 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.116758.2
+May-10 13:11:10.621 [Thread-2] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 5 -- first: TaskHandler[id: 10; name: formatChr (1); status: RUNNING; exit: -; workDir: /scratch/tmp/piper/native_30/work/c5/f0aad950c6b1591995282df9ea412d]
+May-10 13:13:11.224 [Actor Thread 41] INFO  nextflow.processor.TaskDispatcher - [36/922d9a] Submitted process > normExonerate (8)
+May-10 13:13:11.224 [pool-1-thread-5] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.136076.4
+May-10 13:13:11.225 [pool-1-thread-5] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.115238.2
+May-10 13:13:11.225 [pool-1-thread-5] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.56802.2
+May-10 13:13:11.225 [pool-1-thread-5] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.59977.12
+May-10 13:13:11.226 [pool-1-thread-5] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.126783.5
+May-10 13:13:11.226 [pool-1-thread-5] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.77894.3
+May-10 13:13:11.226 [pool-1-thread-5] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.8501.3
+May-10 13:13:11.226 [pool-1-thread-5] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.85960.1
+May-10 13:13:11.227 [pool-1-thread-5] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.116758.2
+May-10 13:13:31.465 [Actor Thread 44] INFO  nextflow.processor.TaskDispatcher - [d5/d5d8cc] Submitted process > normExonerate (9)
+May-10 13:13:31.465 [pool-1-thread-10] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.96472.3
+May-10 13:13:31.466 [pool-1-thread-10] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.58891.1
+May-10 13:13:31.466 [pool-1-thread-10] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.136709.2
+May-10 13:13:31.466 [pool-1-thread-10] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.42845.2
+May-10 13:13:31.466 [pool-1-thread-10] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.93615.1
+May-10 13:13:31.466 [pool-1-thread-10] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.132887.3
+May-10 13:13:31.467 [pool-1-thread-10] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.146412.1
+May-10 13:13:31.467 [pool-1-thread-10] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.75286.1
+May-10 13:13:31.467 [pool-1-thread-10] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.28328.3
+May-10 13:13:31.467 [pool-1-thread-10] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.102.1
+May-10 13:13:31.467 [pool-1-thread-10] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.88621.1
+May-10 13:13:31.468 [pool-1-thread-10] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.94730.1
+May-10 13:13:31.468 [pool-1-thread-10] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.71472.2
+May-10 13:13:31.468 [pool-1-thread-10] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.115782.2
+May-10 13:13:31.468 [pool-1-thread-10] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.128925.1
+May-10 13:14:00.955 [Actor Thread 46] INFO  nextflow.processor.TaskDispatcher - [65/de037f] Submitted process > exonerate (11)
+May-10 13:14:27.096 [Actor Thread 48] INFO  nextflow.processor.TaskDispatcher - [8e/141266] Submitted process > normExonerate (10)
+May-10 13:14:27.096 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.96472.3
+May-10 13:14:27.097 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.9164.2
+May-10 13:14:27.097 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.58891.1
+May-10 13:14:27.097 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.136709.2
+May-10 13:14:27.098 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.134186.2
+May-10 13:14:27.098 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.61059.1
+May-10 13:14:27.098 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.87653.2
+May-10 13:14:27.099 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.136404.9
+May-10 13:14:27.099 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.6498.2
+May-10 13:14:27.100 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.84475.3
+May-10 13:14:27.100 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.42845.2
+May-10 13:14:27.100 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.93615.1
+May-10 13:14:27.101 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.61358.1
+May-10 13:14:27.101 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.132887.3
+May-10 13:14:27.101 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.74717.1
+May-10 13:14:27.102 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.9801.1
+May-10 13:14:27.102 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.94004.1
+May-10 13:14:27.103 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.146412.1
+May-10 13:14:27.103 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.57194.1
+May-10 13:14:27.103 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.75286.1
+May-10 13:14:27.104 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.28328.3
+May-10 13:14:27.104 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.136398.2
+May-10 13:14:27.104 [pool-1-thread-8] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.102.1
+May-10 13:14:40.734 [Actor Thread 47] DEBUG nextflow.processor.TaskProcessor - <formatChr> Sending poison pills and terminating process
+May-10 13:14:40.734 [Actor Thread 47] DEBUG nextflow.Session - <<< barrier arrive (process: formatChr)
+May-10 13:14:40.735 [Actor Thread 51] DEBUG n.processor.ParallelTaskProcessor - <formatChr> After stop -- shareObjs [:]
+May-10 13:14:40.735 [Actor Thread 53] DEBUG n.processor.ParallelTaskProcessor - <exonerate> Poison pill arrived
+May-10 13:14:40.735 [Actor Thread 47] DEBUG nextflow.processor.StateObj - <exonerate> State before poison: StateObj[submitted: 12; completed: 10; poisoned: false; allScalar: false]
+May-10 13:14:40.763 [Actor Thread 50] INFO  nextflow.processor.TaskDispatcher - [b3/9d9a07] Submitted process > exonerate (12)
+May-10 13:14:51.329 [Actor Thread 55] INFO  nextflow.processor.TaskDispatcher - [77/e6e436] Submitted process > normExonerate (11)
+May-10 13:14:51.329 [pool-1-thread-3] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.42845.2
+May-10 13:15:37.479 [Actor Thread 54] DEBUG nextflow.processor.TaskProcessor - <exonerate> Sending poison pills and terminating process
+May-10 13:15:37.480 [Actor Thread 54] DEBUG nextflow.Session - <<< barrier arrive (process: exonerate)
+May-10 13:15:37.480 [Actor Thread 56] DEBUG n.processor.ParallelTaskProcessor - <normExonerate> Poison pill arrived
+May-10 13:15:37.481 [Actor Thread 59] DEBUG n.processor.ParallelTaskProcessor - <exonerate> After stop -- shareObjs [:]
+May-10 13:15:37.481 [Actor Thread 60] DEBUG nextflow.processor.StateObj - <normExonerate> State before poison: StateObj[submitted: 12; completed: 11; poisoned: false; allScalar: false]
+May-10 13:15:37.491 [Actor Thread 58] INFO  nextflow.processor.TaskDispatcher - [ab/111cbf] Submitted process > normExonerate (12)
+May-10 13:15:37.492 [pool-1-thread-6] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.115238.2
+May-10 13:15:37.492 [pool-1-thread-6] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.116758.2
+May-10 13:15:37.492 [pool-1-thread-6] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.87653.2
+May-10 13:15:37.492 [pool-1-thread-6] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.42845.2
+May-10 13:15:37.492 [pool-1-thread-6] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.9801.1
+May-10 13:15:37.493 [pool-1-thread-6] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.102.1
+May-10 13:15:37.493 [pool-1-thread-6] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.88621.1
+May-10 13:15:37.493 [pool-1-thread-6] DEBUG nextflow.Nextflow - normExonerate > Processing queryId: CUFF.128925.1
+May-10 13:15:37.496 [Actor Thread 57] DEBUG nextflow.processor.TaskProcessor - <normExonerate> Sending poison pills and terminating process
+May-10 13:15:37.497 [Actor Thread 57] DEBUG nextflow.Session - <<< barrier arrive (process: normExonerate)
+May-10 13:15:37.497 [Actor Thread 61] DEBUG n.processor.ParallelTaskProcessor - <normExonerate> After stop -- shareObjs [:]
+May-10 13:15:37.536 [Actor Thread 58] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 12; slices: 1; internal sort time: 0.025 s; external sort time: 0.007 s; total time: 0.032 s
+May-10 13:15:37.549 [Actor Thread 58] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf3799717867272701158
+May-10 13:15:37.581 [Actor Thread 56] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 96; slices: 1; internal sort time: 0.053 s; external sort time: 0.024 s; total time: 0.077 s
+May-10 13:15:37.586 [Actor Thread 56] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf3562959001861674463
+May-10 13:15:37.599 [Actor Thread 65] INFO  nextflow.processor.TaskDispatcher - [3e/a0d4e5] Submitted process > similarity (5)
+May-10 13:15:37.599 [Actor Thread 63] INFO  nextflow.processor.TaskDispatcher - [68/458ef3] Submitted process > similarity (6)
+May-10 13:15:37.600 [Actor Thread 69] INFO  nextflow.processor.TaskDispatcher - [4d/733bb1] Submitted process > similarity (10)
+May-10 13:15:37.601 [Actor Thread 61] INFO  nextflow.processor.TaskDispatcher - [e2/d19e55] Submitted process > similarity (1)
+May-10 13:15:37.601 [Actor Thread 64] INFO  nextflow.processor.TaskDispatcher - [f0/baa9aa] Submitted process > similarity (4)
+May-10 13:15:37.601 [Actor Thread 59] INFO  nextflow.processor.TaskDispatcher - [d0/1795f6] Submitted process > similarity (2)
+May-10 13:15:37.602 [Actor Thread 66] INFO  nextflow.processor.TaskDispatcher - [05/793dee] Submitted process > similarity (7)
+May-10 13:15:37.602 [Actor Thread 62] INFO  nextflow.processor.TaskDispatcher - [f8/817da6] Submitted process > similarity (3)
+May-10 13:15:37.602 [Actor Thread 67] INFO  nextflow.processor.TaskDispatcher - [50/c59a80] Submitted process > similarity (8)
+May-10 13:15:37.603 [Actor Thread 68] INFO  nextflow.processor.TaskDispatcher - [09/579f35] Submitted process > similarity (9)
+May-10 13:15:37.880 [Actor Thread 56] INFO  nextflow.processor.TaskDispatcher - [db/e630e6] Submitted process > similarity (11)
+May-10 13:15:37.896 [Actor Thread 64] INFO  nextflow.processor.TaskDispatcher - [4c/7fb205] Submitted process > similarity (15)
+May-10 13:15:37.902 [Actor Thread 69] INFO  nextflow.processor.TaskDispatcher - [de/2b31e6] Submitted process > similarity (14)
+May-10 13:15:38.049 [Actor Thread 65] INFO  nextflow.processor.TaskDispatcher - [a5/d5aa48] Submitted process > similarity (13)
+May-10 13:15:38.164 [Actor Thread 63] INFO  nextflow.processor.TaskDispatcher - [5f/8f3516] Submitted process > similarity (12)
+May-10 13:15:38.194 [Actor Thread 66] INFO  nextflow.processor.TaskDispatcher - [5a/28ecad] Submitted process > similarity (17)
+May-10 13:15:38.217 [Actor Thread 59] INFO  nextflow.processor.TaskDispatcher - [0a/d4f224] Submitted process > similarity (16)
+May-10 13:15:38.226 [Actor Thread 68] INFO  nextflow.processor.TaskDispatcher - [93/3d8469] Submitted process > similarity (21)
+May-10 13:15:38.229 [Actor Thread 70] INFO  nextflow.processor.TaskDispatcher - [80/f80550] Submitted process > similarity (20)
+May-10 13:15:38.391 [Actor Thread 62] INFO  nextflow.processor.TaskDispatcher - [c8/fb9154] Submitted process > similarity (18)
+May-10 13:15:38.484 [Actor Thread 67] INFO  nextflow.processor.TaskDispatcher - [78/a886ca] Submitted process > similarity (19)
+May-10 13:15:38.522 [Actor Thread 56] INFO  nextflow.processor.TaskDispatcher - [8f/281c96] Submitted process > similarity (22)
+May-10 13:15:38.551 [Actor Thread 64] INFO  nextflow.processor.TaskDispatcher - [38/24821c] Submitted process > similarity (23)
+May-10 13:15:38.556 [Actor Thread 69] INFO  nextflow.processor.TaskDispatcher - [ee/8e000a] Submitted process > similarity (24)
+May-10 13:15:38.598 [Actor Thread 65] INFO  nextflow.processor.TaskDispatcher - [e1/cbf618] Submitted process > similarity (25)
+May-10 13:15:38.793 [Actor Thread 63] INFO  nextflow.processor.TaskDispatcher - [b1/f31976] Submitted process > similarity (26)
+May-10 13:15:38.800 [Actor Thread 66] INFO  nextflow.processor.TaskDispatcher - [10/dafc84] Submitted process > similarity (27)
+May-10 13:15:38.880 [Actor Thread 59] INFO  nextflow.processor.TaskDispatcher - [7f/97bc53] Submitted process > similarity (28)
+May-10 13:15:39.032 [Actor Thread 68] INFO  nextflow.processor.TaskDispatcher - [9c/82a679] Submitted process > similarity (30)
+May-10 13:15:39.120 [Actor Thread 70] INFO  nextflow.processor.TaskDispatcher - [5c/3a7738] Submitted process > similarity (29)
+May-10 13:15:39.598 [Actor Thread 62] INFO  nextflow.processor.TaskDispatcher - [ec/3d11b3] Submitted process > similarity (31)
+May-10 13:15:43.347 [Actor Thread 67] INFO  nextflow.processor.TaskDispatcher - [87/89c1cf] Submitted process > similarity (32)
+May-10 13:15:43.409 [Actor Thread 56] INFO  nextflow.processor.TaskDispatcher - [cd/aa6e48] Submitted process > similarity (33)
+May-10 13:15:43.438 [Actor Thread 64] INFO  nextflow.processor.TaskDispatcher - [3e/80bff0] Submitted process > similarity (34)
+May-10 13:15:43.703 [Actor Thread 61] INFO  nextflow.processor.TaskDispatcher - [07/33544d] Submitted process > similarity (35)
+May-10 13:15:43.703 [Actor Thread 58] DEBUG n.processor.ParallelTaskProcessor - <similarity> Poison pill arrived
+May-10 13:15:43.703 [Actor Thread 57] DEBUG nextflow.processor.StateObj - <similarity> State before poison: StateObj[submitted: 46; completed: 24; poisoned: false; allScalar: false]
+May-10 13:15:43.743 [Actor Thread 65] INFO  nextflow.processor.TaskDispatcher - [aa/f39d3f] Submitted process > similarity (36)
+May-10 13:15:43.994 [Actor Thread 69] INFO  nextflow.processor.TaskDispatcher - [51/4cafbb] Submitted process > similarity (37)
+May-10 13:15:43.999 [Actor Thread 66] INFO  nextflow.processor.TaskDispatcher - [8a/8f3082] Submitted process > similarity (38)
+May-10 13:15:44.223 [Actor Thread 59] INFO  nextflow.processor.TaskDispatcher - [ee/5640c8] Submitted process > similarity (39)
+May-10 13:15:44.410 [Actor Thread 68] INFO  nextflow.processor.TaskDispatcher - [b3/712d3d] Submitted process > similarity (40)
+May-10 13:15:44.529 [Actor Thread 70] INFO  nextflow.processor.TaskDispatcher - [34/e4304d] Submitted process > similarity (41)
+May-10 13:15:44.814 [Actor Thread 62] INFO  nextflow.processor.TaskDispatcher - [19/9a53e1] Submitted process > similarity (42)
+May-10 13:15:44.891 [Actor Thread 67] INFO  nextflow.processor.TaskDispatcher - [03/48b5ac] Submitted process > similarity (43)
+May-10 13:15:45.068 [Actor Thread 56] INFO  nextflow.processor.TaskDispatcher - [ea/f6ba05] Submitted process > similarity (44)
+May-10 13:15:45.091 [Actor Thread 64] INFO  nextflow.processor.TaskDispatcher - [f1/b31b63] Submitted process > similarity (45)
+May-10 13:15:45.310 [Actor Thread 61] INFO  nextflow.processor.TaskDispatcher - [c0/5cbb77] Submitted process > similarity (46)
+May-10 13:15:54.303 [Actor Thread 57] DEBUG nextflow.processor.TaskProcessor - <similarity> Sending poison pills and terminating process
+May-10 13:15:54.303 [Actor Thread 57] DEBUG nextflow.Session - <<< barrier arrive (process: similarity)
+May-10 13:15:54.316 [Actor Thread 64] DEBUG n.processor.ParallelTaskProcessor - <similarity> After stop -- shareObjs [:]
+May-10 13:15:54.336 [Actor Thread 61] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 46; slices: 1; internal sort time: 0.007 s; external sort time: 0.013 s; total time: 0.02 s
+May-10 13:15:54.338 [Actor Thread 61] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf6572958794680768233
+May-10 13:15:54.349 [Actor Thread 61] INFO  nextflow.processor.TaskDispatcher - [cf/5bc048] Submitted process > matrix (1)
+May-10 13:15:54.574 [Actor Thread 71] DEBUG nextflow.processor.TaskProcessor - <matrix> Sending poison pills and terminating process
+May-10 13:15:54.574 [Actor Thread 71] DEBUG nextflow.Session - <<< barrier arrive (process: matrix)
+May-10 13:15:54.575 [main] DEBUG nextflow.Session - Session await > processes completed
+May-10 13:15:54.575 [Actor Thread 64] DEBUG n.processor.ParallelTaskProcessor - <matrix> After stop -- shareObjs [:]
+May-10 13:15:54.662 [Thread-2] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+May-10 13:15:54.663 [main] DEBUG nextflow.Session - Session await > done
+May-10 13:15:54.663 [main] DEBUG nextflow.trace.TraceFileObserver - Flow completing -- flushing trace file
+May-10 13:15:54.666 [main] DEBUG nextflow.trace.TimelineObserver - Flow completing -- rendering html timeline
+May-10 13:15:54.695 [main] DEBUG nextflow.Session - Session destroyed

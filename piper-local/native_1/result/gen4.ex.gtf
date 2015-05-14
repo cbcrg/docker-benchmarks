@@ -1,0 +1,17 @@
+JH603219.1	BLAST	exon	3054083	3055022	.	+	.	query_id "CUFF.115238.2"; hitName "CUFF.115238.2_hit1"; gene_id "FAKE__CUFF.115238.2"; transcript_id "CUFF.115238.2";
+JH603219.1	BLAST	exon	3055479	3056661	.	+	.	query_id "CUFF.115238.2"; hitName "CUFF.115238.2_hit1"; gene_id "FAKE__CUFF.115238.2"; transcript_id "CUFF.115238.2";
+JH603219.1	BLAST	exon	3056701	3056837	.	+	.	query_id "CUFF.115238.2"; hitName "CUFF.115238.2_hit1"; gene_id "FAKE__CUFF.115238.2"; transcript_id "CUFF.115238.2";
+JH603219.1	BLAST	exon	3057448	3057916	.	+	.	query_id "CUFF.115238.2"; hitName "CUFF.115238.2_hit1"; gene_id "FAKE__CUFF.115238.2"; transcript_id "CUFF.115238.2";
+JH603219.1	BLAST	exon	3058115	3058526	.	+	.	query_id "CUFF.115238.2"; hitName "CUFF.115238.2_hit1"; gene_id "FAKE__CUFF.115238.2"; transcript_id "CUFF.115238.2";
+JH603219.1	BLAST	exon	3059853	3060011	.	+	.	query_id "CUFF.115238.2"; hitName "CUFF.115238.2_hit1"; gene_id "FAKE__CUFF.115238.2"; transcript_id "CUFF.115238.2";
+JH603215.1	BLAST	exon	6352355	6352920	.	+	.	query_id "CUFF.13755.2"; hitName "CUFF.13755.2_hit1"; gene_id "FAKE__CUFF.13755.2"; transcript_id "CUFF.13755.2";
+JH603183.1	BLAST	exon	3853078	3854281	.	+	.	query_id "CUFF.77894.3"; hitName "CUFF.77894.3_hit1"; gene_id "FAKE__CUFF.77894.3"; transcript_id "CUFF.77894.3";
+JH603183.1	BLAST	exon	3854315	3855759	.	+	.	query_id "CUFF.77894.3"; hitName "CUFF.77894.3_hit1"; gene_id "FAKE__CUFF.77894.3"; transcript_id "CUFF.77894.3";
+JH603183.1	BLAST	exon	3855840	3856104	.	+	.	query_id "CUFF.77894.3"; hitName "CUFF.77894.3_hit1"; gene_id "FAKE__CUFF.77894.3"; transcript_id "CUFF.77894.3";
+JH603183.1	BLAST	exon	3857358	3857949	.	+	.	query_id "CUFF.77894.3"; hitName "CUFF.77894.3_hit1"; gene_id "FAKE__CUFF.77894.3"; transcript_id "CUFF.77894.3";
+JH603183.1	BLAST	exon	3858329	3858807	.	+	.	query_id "CUFF.77894.3"; hitName "CUFF.77894.3_hit1"; gene_id "FAKE__CUFF.77894.3"; transcript_id "CUFF.77894.3";
+JH603183.1	BLAST	exon	3859427	3859501	.	+	.	query_id "CUFF.77894.3"; hitName "CUFF.77894.3_hit1"; gene_id "FAKE__CUFF.77894.3"; transcript_id "CUFF.77894.3";
+JH603225.1	BLAST	exon	4705067	4705152	.	-	.	query_id "CUFF.71472.2"; hitName "CUFF.71472.2_hit1"; gene_id "FAKE__CUFF.71472.2"; transcript_id "CUFF.71472.2";
+JH603225.1	BLAST	exon	4703690	4704218	.	-	.	query_id "CUFF.71472.2"; hitName "CUFF.71472.2_hit1"; gene_id "FAKE__CUFF.71472.2"; transcript_id "CUFF.71472.2";
+JH603178.1	BLAST	exon	15171586	15171630	.	-	.	query_id "CUFF.128925.1"; hitName "CUFF.128925.1_hit1"; gene_id "FAKE__CUFF.128925.1"; transcript_id "CUFF.128925.1";
+JH603178.1	BLAST	exon	15170974	15171551	.	-	.	query_id "CUFF.128925.1"; hitName "CUFF.128925.1_hit1"; gene_id "FAKE__CUFF.128925.1"; transcript_id "CUFF.128925.1";

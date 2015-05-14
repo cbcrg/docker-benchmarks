@@ -1,0 +1,22 @@
+N E X T F L O W  ~  version 0.13.4
+Launching 'nextflow-io/rnatoy' - revision: fdbbe257c2 [master]
+R N A T O Y   P I P E L I N E      
+=================================
+genome             : ../data/mouse_genome_mm9.fa
+annotat            : ../data/mm65.long.ok.gtf
+pair1              : ../data/*_sub_1.fastq.gz
+pair2              : ../data/*_sub_2.fastq.gz
+[warm up] executor > local
+[19/161a25] Submitted process > buildIndex (1)
+[6d/b78c81] Submitted process > mapping (2)
+[b5/3a6a16] Submitted process > mapping (1)
+[59/ff059a] Submitted process > mapping (3)
+[b1/15ed26] Submitted process > mapping (4)
+[b9/8b60ae] Submitted process > makeTranscript (1)
+Saving: transcript_wgEncodeCshlLongRnaSeqCnsE18Rep1.gtf
+[2b/a4caee] Submitted process > makeTranscript (2)
+Saving: transcript_wgEncodeCshlLongRnaSeqCnsE14Rep1.gtf
+[d3/e13d33] Submitted process > makeTranscript (3)
+Saving: transcript_wgEncodeCshlLongRnaSeqCnsE18Rep2.gtf
+[82/03dbff] Submitted process > makeTranscript (4)
+Saving: transcript_wgEncodeCshlLongRnaSeqCnsE14Rep2.gtf

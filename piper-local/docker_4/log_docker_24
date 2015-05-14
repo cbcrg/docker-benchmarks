@@ -1,0 +1,238 @@
+N E X T F L O W  ~  version 0.14.0-SNAPSHOT
+Launching ../piper-nf/piper.nf
+Using genomes-db path: /scratch/tmp/piper/docker_24/db
+P I P E R - RNA mapping pipeline - ver 1.4.2
+============================================
+query               : /scratch/tmp/piper/chicken/query100.fa
+genomes-db          : /scratch/tmp/piper/docker_24/db
+query-chunk-size    : 1000
+genomes-file        : ../chicken/genomes.txt
+genomes-list        : -
+genomes-folder      : /scratch/tmp/piper/piper-nf/tutorial/genomes/
+result-dir          : result
+blast-strategy      : ncbi-blast
+align-strategy      : slow_pair
+exonerate-success:  : 1
+exonerate-mode:     : 1000
+exonerate-chunk-size: 2500
+repeat-cov          : 20
+
+
+Validating genome: gen1 -- file: /scratch/tmp/piper/chicken/genomes/Anas_platyrhynchos.BGI_duck_1.0.73.dna_sm.fa
+Validating genome: gen2 -- file: /scratch/tmp/piper/chicken/genomes/Anolis_carolinensis.AnoCar2.0.73.dna_sm.fa
+Validating genome: gen3 -- file: /scratch/tmp/piper/chicken/genomes/Chrysemys_picta_bellii.ChrPicBel3.0.1.dna_rm.toplevel.fa
+Validating genome: gen4 -- file: /scratch/tmp/piper/chicken/genomes/Ficedula_albicollis.FicAlb_1.4.73.dna_sm.fa
+Validating genome: gen5 -- file: /scratch/tmp/piper/chicken/genomes/Gallus_gallus.Galgal4.73.dna_sm.fa
+Validating genome: gen6 -- file: /scratch/tmp/piper/chicken/genomes/Meleagris_gallopavo.UMD2.73.dna_sm.fa
+Validating genome: gen7 -- file: /scratch/tmp/piper/chicken/genomes/melobsittacus_undulatus_sm.fa
+Validating genome: gen8 -- file: /scratch/tmp/piper/chicken/genomes/Pelodiscus_sinensis.PelSin_1.0.73.dna_sm.fa
+Validating genome: gen9 -- file: /scratch/tmp/piper/chicken/genomes/Taeniopygia_guttata.taeGut3.2.4.73.dna_sm.fa
+Splitting query file: /scratch/tmp/piper/chicken/query100.fa ..
+Created 1 input chunks to path: /scratch/tmp/piper/docker_24/work/e4/f93ece87a3ce0450c2410d37d47f01
+[warm up] executor > local
+[ad/76e374] Submitted process > formatBlast (8)
+[99/a19c95] Submitted process > formatBlast (6)
+[3e/412677] Submitted process > formatBlast (9)
+[95/3d0350] Submitted process > formatBlast (2)
+[0c/42a35f] Submitted process > formatChr (2)
+[36/a78689] Submitted process > formatChr (5)
+[26/17b4a2] Submitted process > formatBlast (4)
+[0e/ef5649] Submitted process > formatBlast (1)
+[b7/d4ab74] Submitted process > formatChr (8)
+[2f/beeb8c] Submitted process > formatChr (4)
+[9f/ad48b6] Submitted process > formatChr (3)
+[29/d13a96] Submitted process > formatBlast (3)
+[a0/d70da3] Submitted process > formatBlast (5)
+[bd/21b771] Submitted process > formatChr (7)
+[8b/2b0ef3] Submitted process > formatChr (9)
+[bc/44ddcf] Submitted process > formatChr (6)
+[0a/e32f76] Submitted process > formatChr (1)
+[dd/4d50e1] Submitted process > formatBlast (7)
+[08/e57aaa] Submitted process > blast (1)
+[4b/fa44ef] Submitted process > blast (2)
+[db/57f57a] Submitted process > blast (3)
+[93/a9ae24] Submitted process > blast (4)
+[eb/f51ef1] Submitted process > blast (5)
+[12/4dee8d] Submitted process > blast (6)
+[08/36e509] Submitted process > blast (7)
+[8c/b0afe7] Submitted process > blast (8)
+[4d/b547a7] Submitted process > exonerate (2)
+[df/4be7a3] Submitted process > exonerate (1)
+[cb/c3b1b1] Submitted process > blast (9)
+[14/ec03c3] Submitted process > exonerate (3)
+[ec/f0aa46] Submitted process > exonerate (4)
+[27/7f1d12] Submitted process > exonerate (5)
+[6f/e69787] Submitted process > exonerate (6)
+[50/708b87] Submitted process > exonerate (7)
+[f2/f12762] Submitted process > exonerate (8)
+[45/5e892a] Submitted process > normExonerate (1)
+[a0/904d05] Submitted process > normExonerate (2)
+[b7/b10fc1] Submitted process > exonerate (9)
+[54/3f8cae] Submitted process > normExonerate (3)
+[ed/30d490] Submitted process > normExonerate (4)
+[5c/d62470] Submitted process > normExonerate (5)
+[f8/fe03b5] Submitted process > exonerate (10)
+[ac/7c2a79] Submitted process > normExonerate (6)
+[6e/aff010] Submitted process > normExonerate (7)
+[be/a4538b] Submitted process > normExonerate (8)
+[c8/b235ef] Submitted process > exonerate (11)
+[ee/c4a43d] Submitted process > normExonerate (9)
+[c4/922e98] Submitted process > normExonerate (10)
+[c0/ceb798] Submitted process > exonerate (12)
+[36/d0493e] Submitted process > normExonerate (11)
+[de/7e09a5] Submitted process > normExonerate (12)
+[f4/d78c0c] Submitted process > similarity (4)
+[e9/425c68] Submitted process > similarity (7)
+[a9/2a9d39] Submitted process > similarity (6)
+[fd/a2f91c] Submitted process > similarity (11)
+[33/f13fd2] Submitted process > similarity (1)
+[b5/1b26ca] Submitted process > similarity (8)
+[6b/bb3ba9] Submitted process > similarity (3)
+[73/94dabf] Submitted process > similarity (2)
+[24/3b140a] Submitted process > similarity (5)
+[83/40f83c] Submitted process > similarity (10)
+[0a/910983] Submitted process > similarity (9)
+[17/862044] Submitted process > similarity (12)
+[19/c5c1db] Submitted process > similarity (13)
+[f7/ac1860] Submitted process > similarity (14)
+[38/acc7a4] Submitted process > similarity (21)
+[5c/822c62] Submitted process > similarity (16)
+[f8/a4e600] Submitted process > similarity (15)
+[0d/f2e9d3] Submitted process > similarity (17)
+[41/ac23d4] Submitted process > similarity (18)
+[4e/592221] Submitted process > similarity (19)
+[cf/0b906c] Submitted process > similarity (20)
+[9e/a4fd28] Submitted process > similarity (22)
+[1a/49e809] Submitted process > similarity (23)
+[35/92f083] Submitted process > similarity (24)
+[ee/800ff5] Submitted process > similarity (25)
+[d0/0df656] Submitted process > similarity (26)
+[03/1b15d3] Submitted process > similarity (27)
+[da/0332eb] Submitted process > similarity (28)
+[c4/df7d6f] Submitted process > similarity (29)
+[2d/e67599] Submitted process > similarity (30)
+[62/055672] Submitted process > similarity (31)
+[07/8953cb] Submitted process > similarity (32)
+[31/37bd96] Submitted process > similarity (33)
+[8f/1fc377] Submitted process > similarity (34)
+[9a/935fa0] Submitted process > similarity (35)
+[b8/d83186] Submitted process > similarity (36)
+[11/924b18] Submitted process > similarity (37)
+[f8/8250f9] Submitted process > similarity (38)
+[dc/f119ab] Submitted process > similarity (39)
+[d7/2ad83e] Submitted process > similarity (40)
+[bd/a0fbe8] Submitted process > similarity (41)
+[f0/c3ece8] Submitted process > similarity (42)
+[2a/cd24d6] Submitted process > similarity (43)
+[8a/33ae97] Submitted process > similarity (44)
+[67/bb3942] Submitted process > similarity (45)
+[2d/b7b724] Submitted process > similarity (46)
+[a9/8d4170] Submitted process > matrix (1)
+
+====== Pipe-R sim matrix =======
+species,gen1,gen2,gen3,gen4,gen5,gen6,gen7,gen8,gen9
+CUFF.129626.3,0,0,0,0,100.00,0,0,0,0
+CUFF.59977.12,0,0,0,0,100.00,89.42,0,0,0
+CUFF.142223.2,0,0,0,0,100.00,0,0,0,0
+CUFF.57194.1,0,0,0,0,99.84,0,0,0,0
+CUFF.71472.2,0,0,0,69.07,100.00,93.24,0,0,0
+CUFF.56802.2,0,0,0,0,98.95,89.43,0,0,0
+CUFF.132887.3,0,0,0,0,100.00,95.44,0,0,92.42
+CUFF.116758.2,74.54,0,0,0,100.00,91.28,0,0,0
+CUFF.134439.18,0,0,0,0,100.00,0,0,0,0
+CUFF.128925.1,94.39,0,0,90.72,97.14,93.28,86.42,87.57,89.85
+CUFF.61358.1,0,0,0,0,68.07,0,0,0,0
+CUFF.101790.1,0,0,0,0,100.00,0,80.19,0,0
+CUFF.94004.1,0,0,0,0,100.00,0,0,0,0
+CUFF.61059.1,0,0,0,0,100.00,0,0,0,0
+CUFF.13755.2,0,0,0,77.17,0,0,0,0,80.16
+CUFF.136076.4,0,0,0,0,0,82.41,0,0,0
+CUFF.146412.1,0,0,0,0,100.00,90.62,0,0,0
+CUFF.136404.9,0,0,0,0,99.95,0,0,0,0
+CUFF.32777.3,0,0,0,0,99.98,0,0,0,0
+CUFF.28328.3,0,0,0,0,100.00,89.73,0,0,0
+CUFF.94730.1,0,0,0,0,100.00,92.42,0,0,0
+CUFF.9164.2,0,0,0,0,100.00,0,0,0,0
+CUFF.88621.1,80.22,0,0,0,100.00,92.10,77.95,0,0
+CUFF.9801.1,85.58,0,0,0,100.00,0,0,0,0
+CUFF.75286.1,0,0,0,0,99.86,93.87,0,0,0
+CUFF.136709.2,0,0,0,0,99.79,92.57,0,0,0
+CUFF.96472.3,0,0,0,0,99.84,91.89,0,0,0
+CUFF.85960.1,0,0,0,0,100.00,91.26,0,0,0
+CUFF.101994.1,0,0,0,0,99.47,0,0,0,0
+CUFF.27382.4,0,0,0,0,100.00,0,0,0,0
+CUFF.115782.2,0,0,0,0,99.18,90.15,0,0,77.90
+CUFF.134186.2,0,0,0,0,100.00,0,0,0,0
+CUFF.93615.1,0,0,0,0,100.00,91.63,0,0,0
+CUFF.42845.2,91.27,0,79.25,0,99.97,96.72,86.67,76.79,0
+CUFF.136398.2,0,0,0,0,100.00,0,0,0,0
+CUFF.8501.3,0,0,0,0,100.00,92.58,0,0,0
+CUFF.115238.2,79.81,0,0,74.39,100.00,91.48,0,0,0
+CUFF.118232.3,0,0,0,0,100.00,0,0,0,0
+CUFF.102.1,78.76,0,0,0,100.00,89.68,75.75,0,0
+CUFF.84475.3,0,0,0,0,100.00,0,0,0,0
+CUFF.87653.2,80.91,0,0,0,100.00,0,73.88,0,0
+CUFF.74717.1,0,0,0,0,100.00,0,0,0,0
+CUFF.58891.1,0,0,0,0,100.00,89.83,0,0,0
+CUFF.77894.3,0,0,0,76.11,100.00,92.04,0,0,74.71
+CUFF.6498.2,0,0,0,0,100.00,0,81.50,0,0
+CUFF.126783.5,0,0,0,0,100.00,90.98,0,0,0
+CUFF.134325.13,0,0,0,0,0,0,0,0,0
+CUFF.97297.3,0,0,0,0,0,0,0,0,0
+CUFF.136141.1,0,0,0,0,0,0,0,0,0
+CUFF.133681.2,0,0,0,0,0,0,0,0,0
+CUFF.135245.1,0,0,0,0,0,0,0,0,0
+CUFF.65550.2,0,0,0,0,0,0,0,0,0
+CUFF.134757.11,0,0,0,0,0,0,0,0,0
+CUFF.138219.10,0,0,0,0,0,0,0,0,0
+CUFF.133652.2,0,0,0,0,0,0,0,0,0
+CUFF.131239.6,0,0,0,0,0,0,0,0,0
+CUFF.87653.4,0,0,0,0,0,0,0,0,0
+CUFF.4543.4,0,0,0,0,0,0,0,0,0
+CUFF.99724.4,0,0,0,0,0,0,0,0,0
+CUFF.4769.1,0,0,0,0,0,0,0,0,0
+CUFF.135028.4,0,0,0,0,0,0,0,0,0
+CUFF.80492.2,0,0,0,0,0,0,0,0,0
+CUFF.8997.5,0,0,0,0,0,0,0,0,0
+CUFF.134434.3,0,0,0,0,0,0,0,0,0
+CUFF.134129.2,0,0,0,0,0,0,0,0,0
+CUFF.133918.14,0,0,0,0,0,0,0,0,0
+CUFF.135846.18,0,0,0,0,0,0,0,0,0
+CUFF.136444.9,0,0,0,0,0,0,0,0,0
+CUFF.139010.2,0,0,0,0,0,0,0,0,0
+CUFF.100862.2,0,0,0,0,0,0,0,0,0
+CUFF.138029.20,0,0,0,0,0,0,0,0,0
+CUFF.136598.11,0,0,0,0,0,0,0,0,0
+CUFF.136152.3,0,0,0,0,0,0,0,0,0
+CUFF.81515.1,0,0,0,0,0,0,0,0,0
+CUFF.136249.1,0,0,0,0,0,0,0,0,0
+CUFF.135028.2,0,0,0,0,0,0,0,0,0
+CUFF.105879.4,0,0,0,0,0,0,0,0,0
+CUFF.136088.27,0,0,0,0,0,0,0,0,0
+CUFF.110871.1,0,0,0,0,0,0,0,0,0
+CUFF.29702.1,0,0,0,0,0,0,0,0,0
+CUFF.22618.3,0,0,0,0,0,0,0,0,0
+CUFF.133314.2,0,0,0,0,0,0,0,0,0
+CUFF.53356.1,0,0,0,0,0,0,0,0,0
+CUFF.131156.6,0,0,0,0,0,0,0,0,0
+CUFF.137452.5,0,0,0,0,0,0,0,0,0
+CUFF.130731.4,0,0,0,0,0,0,0,0,0
+CUFF.137974.6,0,0,0,0,0,0,0,0,0
+CUFF.132201.1,0,0,0,0,0,0,0,0,0
+CUFF.78783.3,0,0,0,0,0,0,0,0,0
+CUFF.131175.2,0,0,0,0,0,0,0,0,0
+CUFF.133918.13,0,0,0,0,0,0,0,0,0
+CUFF.134701.1,0,0,0,0,0,0,0,0,0
+CUFF.137696.7,0,0,0,0,0,0,0,0,0
+CUFF.132016.3,0,0,0,0,0,0,0,0,0
+CUFF.68537.1,0,0,0,0,0,0,0,0,0
+CUFF.138101.3,0,0,0,0,0,0,0,0,0
+CUFF.133853.4,0,0,0,0,0,0,0,0,0
+CUFF.130784.1,0,0,0,0,0,0,0,0,0
+CUFF.131956.2,0,0,0,0,0,0,0,0,0
+CUFF.138245.15,0,0,0,0,0,0,0,0,0
+
+
+
+Saving similarity matrix to file:
+> /scratch/tmp/piper/docker_24/result/simMatrix.csv

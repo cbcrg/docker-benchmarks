@@ -1,0 +1,163 @@
+May-05 22:36:36.954 [main] DEBUG nextflow.cli.Launcher - $> /users/cn/ptommaso/bin/nextflow -c ../docker.config run rnatoy -with-timeline
+May-05 22:36:37.003 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 0.13.4
+May-05 22:36:37.072 [main] DEBUG nextflow.scm.AssetManager - Listing pipelines in folders: /users/cn/ptommaso/.nextflow/assets
+May-05 22:36:38.380 [main] INFO  nextflow.cli.CmdRun - Launching 'nextflow-io/rnatoy' - revision: fdbbe257c2 [master]
+May-05 22:36:38.431 [main] DEBUG nextflow.script.ConfigBuilder - Found config base: /users/cn/ptommaso/.nextflow/assets/nextflow-io/rnatoy/nextflow.config
+May-05 22:36:38.433 [main] DEBUG nextflow.script.ConfigBuilder - User config file: ../docker.config
+May-05 22:36:38.435 [main] DEBUG nextflow.script.ConfigBuilder - Parsing config file: /users/cn/ptommaso/.nextflow/assets/nextflow-io/rnatoy/nextflow.config
+May-05 22:36:38.435 [main] DEBUG nextflow.script.ConfigBuilder - Parsing config file: /scratch/tmp/rnatoy-mouse/docker.config
+May-05 22:36:38.544 [main] DEBUG nextflow.Session - Session uuid: 0eb9d49d-bfa7-4e52-a60c-3de984d4e974
+May-05 22:36:38.546 [main] DEBUG nextflow.Session - Executor pool size: 11
+May-05 22:36:38.696 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 0.13.4 build 2983
+  Modified: 04-05-2015 07:25 UTC (09:25 CEST)
+  System: Linux 2.6.32-431.29.2.el6.x86_64
+  Runtime: Groovy 2.3.11 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_40-b26
+  Encoding: UTF-8 (UTF-8)
+  Process: 25402@node-hp0001cn.linux.crg.es [172.21.11.104]
+
+May-05 22:36:38.726 [main] DEBUG nextflow.Session - Session start invoked
+May-05 22:36:38.726 [main] DEBUG nextflow.Session - Registering observer: nextflow.trace.TraceFileObserver
+May-05 22:36:38.727 [main] DEBUG nextflow.Session - Registering observer: nextflow.trace.TimelineObserver
+May-05 22:36:38.731 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+May-05 22:36:38.731 [main] DEBUG nextflow.trace.TraceFileObserver - Flow starting -- trace file: /scratch/tmp/rnatoy-mouse/docker_3/trace.csv
+May-05 22:36:38.741 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+May-05 22:36:38.943 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+May-05 22:36:38.948 [main] INFO  nextflow.Nextflow - R N A T O Y   P I P E L I N E      
+May-05 22:36:38.949 [main] INFO  nextflow.Nextflow - =================================
+May-05 22:36:38.949 [main] INFO  nextflow.Nextflow - genome             : ../data/mouse_genome_mm9.fa
+May-05 22:36:38.949 [main] INFO  nextflow.Nextflow - annotat            : ../data/mm65.long.ok.gtf
+May-05 22:36:38.949 [main] INFO  nextflow.Nextflow - pair1              : ../data/*_sub_1.fastq.gz
+May-05 22:36:38.949 [main] INFO  nextflow.Nextflow - pair2              : ../data/*_sub_2.fastq.gz
+May-05 22:36:38.961 [main] DEBUG nextflow.Channel - files for syntax: glob; folder: ../data/; pattern: *_sub_1.fastq.gz; options: null
+May-05 22:36:39.014 [main] DEBUG nextflow.Channel - files for syntax: glob; folder: ../data/; pattern: *_sub_2.fastq.gz; options: null
+May-05 22:36:39.120 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+May-05 22:36:39.121 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+May-05 22:36:39.129 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+May-05 22:36:39.132 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+May-05 22:36:39.139 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'local' > capacity: 11; pollInterval: 100ms; dumpInterval: 5m 
+May-05 22:36:39.155 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: TaskPollingMonitor
+May-05 22:36:39.156 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+May-05 22:36:39.161 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+May-05 22:36:39.180 [main] DEBUG nextflow.Session - >>> barrier register (process: buildIndex)
+May-05 22:36:39.184 [main] DEBUG nextflow.script.BaseParam - output > channel unknown: genome_index -- creating a new instance
+May-05 22:36:39.196 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > buildIndex -- maxForks: 11
+May-05 22:36:39.225 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+May-05 22:36:39.225 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+May-05 22:36:39.226 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+May-05 22:36:39.226 [main] DEBUG nextflow.Session - >>> barrier register (process: mapping)
+May-05 22:36:39.227 [main] DEBUG nextflow.script.BaseParam - output > channel unknown: bam -- creating a new instance
+May-05 22:36:39.235 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > mapping -- maxForks: 11
+May-05 22:36:39.238 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+May-05 22:36:39.238 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+May-05 22:36:39.238 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+May-05 22:36:39.239 [main] DEBUG nextflow.Session - >>> barrier register (process: makeTranscript)
+May-05 22:36:39.239 [main] DEBUG nextflow.script.BaseParam - output > channel unknown: transcripts -- creating a new instance
+May-05 22:36:39.247 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > makeTranscript -- maxForks: 11
+May-05 22:36:39.248 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+May-05 22:36:39.248 [main] DEBUG nextflow.Session - Session await
+May-05 22:36:39.267 [Actor Thread 7] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /users/cn/ptommaso/.nextflow/assets/nextflow-io/rnatoy/bin
+May-05 22:36:39.328 [Actor Thread 7] INFO  nextflow.processor.TaskDispatcher - [e7/a5d1dd] Submitted process > buildIndex (1)
+May-05 22:41:39.334 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 1; name: buildIndex (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/e7/a5d1dde0c678aa7bb320b3cb594a2b]
+May-05 22:46:39.333 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 1; name: buildIndex (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/e7/a5d1dde0c678aa7bb320b3cb594a2b]
+May-05 22:51:39.398 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 1; name: buildIndex (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/e7/a5d1dde0c678aa7bb320b3cb594a2b]
+May-05 22:56:39.447 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 1; name: buildIndex (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/e7/a5d1dde0c678aa7bb320b3cb594a2b]
+May-05 23:01:39.498 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 1; name: buildIndex (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/e7/a5d1dde0c678aa7bb320b3cb594a2b]
+May-05 23:06:39.550 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 1; name: buildIndex (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/e7/a5d1dde0c678aa7bb320b3cb594a2b]
+May-05 23:11:39.615 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 1; name: buildIndex (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/e7/a5d1dde0c678aa7bb320b3cb594a2b]
+May-05 23:16:39.681 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 1; name: buildIndex (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/e7/a5d1dde0c678aa7bb320b3cb594a2b]
+May-05 23:21:39.695 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 1; name: buildIndex (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/e7/a5d1dde0c678aa7bb320b3cb594a2b]
+May-05 23:26:39.713 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 1; name: buildIndex (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/e7/a5d1dde0c678aa7bb320b3cb594a2b]
+May-05 23:31:39.752 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 1; name: buildIndex (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/e7/a5d1dde0c678aa7bb320b3cb594a2b]
+May-05 23:36:39.801 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 1; name: buildIndex (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/e7/a5d1dde0c678aa7bb320b3cb594a2b]
+May-05 23:41:39.816 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 1; name: buildIndex (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/e7/a5d1dde0c678aa7bb320b3cb594a2b]
+May-05 23:46:39.873 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 1; name: buildIndex (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/e7/a5d1dde0c678aa7bb320b3cb594a2b]
+May-05 23:51:39.928 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 1; name: buildIndex (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/e7/a5d1dde0c678aa7bb320b3cb594a2b]
+May-05 23:56:39.967 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 1; name: buildIndex (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/e7/a5d1dde0c678aa7bb320b3cb594a2b]
+May-06 00:01:40.013 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 1; name: buildIndex (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/e7/a5d1dde0c678aa7bb320b3cb594a2b]
+May-06 00:06:40.040 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 1; name: buildIndex (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/e7/a5d1dde0c678aa7bb320b3cb594a2b]
+May-06 00:11:40.093 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 1; name: buildIndex (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/e7/a5d1dde0c678aa7bb320b3cb594a2b]
+May-06 00:16:40.138 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 1; name: buildIndex (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/e7/a5d1dde0c678aa7bb320b3cb594a2b]
+May-06 00:17:07.124 [Actor Thread 10] DEBUG n.processor.ParallelTaskProcessor - <mapping> Poison pill arrived
+May-06 00:17:07.124 [Actor Thread 12] DEBUG nextflow.processor.TaskProcessor - <buildIndex> Sending poison pills and terminating process
+May-06 00:17:07.127 [Actor Thread 1] DEBUG nextflow.processor.StateObj - <mapping> State before poison: StateObj[submitted: 4; completed: 0; poisoned: false; allScalar: false]
+May-06 00:17:07.130 [Actor Thread 12] DEBUG nextflow.Session - <<< barrier arrive (process: buildIndex)
+May-06 00:17:07.135 [Actor Thread 10] DEBUG n.processor.ParallelTaskProcessor - <buildIndex> After stop -- shareObjs [:]
+May-06 00:17:07.179 [Actor Thread 7] INFO  nextflow.processor.TaskDispatcher - [5b/8eb1e7] Submitted process > mapping (1)
+May-06 00:17:07.181 [Actor Thread 11] INFO  nextflow.processor.TaskDispatcher - [1d/e2be26] Submitted process > mapping (2)
+May-06 00:17:07.181 [Actor Thread 14] INFO  nextflow.processor.TaskDispatcher - [d4/8ce70e] Submitted process > mapping (4)
+May-06 00:17:07.183 [Actor Thread 13] INFO  nextflow.processor.TaskDispatcher - [18/af15ae] Submitted process > mapping (3)
+May-06 00:21:40.163 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 00:26:40.226 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 00:31:40.234 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 00:36:40.284 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 00:41:40.317 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 00:46:40.347 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 00:51:40.403 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 00:56:40.450 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 01:01:40.492 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 01:06:40.522 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 01:11:40.567 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 01:16:40.619 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 01:21:40.648 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 01:26:40.675 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 01:31:40.743 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 01:36:40.808 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 01:41:40.885 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 01:46:40.973 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 01:51:41.048 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 01:56:41.113 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 02:01:41.191 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 02:06:41.264 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 02:11:41.351 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 02:16:41.432 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 02:21:41.503 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 02:26:41.575 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 02:31:41.657 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 02:36:41.724 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 02:41:41.800 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 02:46:41.862 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 02:51:41.921 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 02:56:41.989 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 03:01:42.064 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 03:06:42.136 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 03:11:42.230 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 03:16:42.327 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 03:21:42.396 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 03:26:42.411 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 03:31:42.461 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 03:36:42.517 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 03:41:42.571 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 03:46:42.667 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 03:51:42.723 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 03:56:42.806 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 04:01:42.843 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 04:06:42.932 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 04:11:42.951 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 04:16:42.956 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 2; name: mapping (1); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/5b/8eb1e7a38b0d39e9ebb4bd2275c5a2]
+May-06 04:20:40.581 [Actor Thread 16] INFO  nextflow.processor.TaskDispatcher - [a5/cc3703] Submitted process > makeTranscript (1)
+May-06 04:21:43.038 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 3; name: mapping (2); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/1d/e2be26b2e2e10675cda5bd2397d8f5]
+May-06 04:26:43.055 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- first: TaskHandler[id: 3; name: mapping (2); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/1d/e2be26b2e2e10675cda5bd2397d8f5]
+May-06 04:30:50.277 [Actor Thread 18] INFO  nextflow.processor.TaskDispatcher - [c4/b4589e] Submitted process > makeTranscript (2)
+May-06 04:31:43.145 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- first: TaskHandler[id: 3; name: mapping (2); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/1d/e2be26b2e2e10675cda5bd2397d8f5]
+May-06 04:36:43.198 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- first: TaskHandler[id: 3; name: mapping (2); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/1d/e2be26b2e2e10675cda5bd2397d8f5]
+May-06 04:38:39.574 [Actor Thread 20] INFO  nextflow.processor.TaskDispatcher - [45/ae2776] Submitted process > makeTranscript (3)
+May-06 04:41:43.199 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- first: TaskHandler[id: 5; name: mapping (4); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/d4/8ce70ea62c708299c4c0d5e9a47239]
+May-06 04:46:43.284 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 5; name: mapping (4); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/d4/8ce70ea62c708299c4c0d5e9a47239]
+May-06 04:51:43.367 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 5; name: mapping (4); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/d4/8ce70ea62c708299c4c0d5e9a47239]
+May-06 04:55:34.921 [Actor Thread 19] DEBUG nextflow.processor.TaskProcessor - <mapping> Sending poison pills and terminating process
+May-06 04:55:34.923 [Actor Thread 19] DEBUG nextflow.Session - <<< barrier arrive (process: mapping)
+May-06 04:55:34.923 [Actor Thread 20] DEBUG n.processor.ParallelTaskProcessor - <makeTranscript> Poison pill arrived
+May-06 04:55:34.924 [Actor Thread 23] DEBUG nextflow.processor.StateObj - <makeTranscript> State before poison: StateObj[submitted: 4; completed: 3; poisoned: false; allScalar: false]
+May-06 04:55:34.925 [Actor Thread 24] DEBUG n.processor.ParallelTaskProcessor - <mapping> After stop -- shareObjs [:]
+May-06 04:55:34.931 [Actor Thread 22] INFO  nextflow.processor.TaskDispatcher - [43/dbd866] Submitted process > makeTranscript (4)
+May-06 04:56:43.407 [Thread-4] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- first: TaskHandler[id: 9; name: makeTranscript (4); status: RUNNING; exit: -; workDir: /scratch/tmp/rnatoy-mouse/docker_3/work/43/dbd86651cb646d5371ff90015b9843]
+May-06 05:00:59.698 [Actor Thread 23] DEBUG nextflow.processor.TaskProcessor - <makeTranscript> Sending poison pills and terminating process
+May-06 05:00:59.698 [Actor Thread 23] DEBUG nextflow.Session - <<< barrier arrive (process: makeTranscript)
+May-06 05:00:59.698 [main] DEBUG nextflow.Session - Session await > processes completed
+May-06 05:00:59.699 [Actor Thread 25] DEBUG n.processor.ParallelTaskProcessor - <makeTranscript> After stop -- shareObjs [:]
+May-06 05:00:59.700 [Thread-4] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+May-06 05:00:59.701 [main] DEBUG nextflow.Session - Session await > done
+May-06 05:00:59.701 [main] DEBUG nextflow.trace.TraceFileObserver - Flow completing -- flushing trace file
+May-06 05:00:59.735 [main] DEBUG nextflow.trace.TimelineObserver - Flow completing -- rendering html timeline
+May-06 05:00:59.889 [main] DEBUG nextflow.Session - Session destroyed

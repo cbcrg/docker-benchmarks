@@ -1,0 +1,3 @@
+scaffold:ChrPicBel3.0.1:JH584413.1:1:3366583:1	BLAST	exon	26805	28710	.	-	.	query_id "CUFF.42845.2"; hitName "CUFF.42845.2_hit1"; gene_id "FAKE__CUFF.42845.2"; transcript_id "CUFF.42845.2";
+scaffold:ChrPicBel3.0.1:JH584413.1:1:3366583:1	BLAST	exon	25871	26740	.	-	.	query_id "CUFF.42845.2"; hitName "CUFF.42845.2_hit1"; gene_id "FAKE__CUFF.42845.2"; transcript_id "CUFF.42845.2";
+scaffold:ChrPicBel3.0.1:JH584413.1:1:3366583:1	BLAST	exon	25571	25818	.	-	.	query_id "CUFF.42845.2"; hitName "CUFF.42845.2_hit1"; gene_id "FAKE__CUFF.42845.2"; transcript_id "CUFF.42845.2";

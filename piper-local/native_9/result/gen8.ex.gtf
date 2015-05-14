@@ -1,0 +1,4 @@
+JH208510.1	BLAST	exon	1147359	1149269	.	-	.	query_id "CUFF.42845.2"; hitName "CUFF.42845.2_hit1"; gene_id "FAKE__CUFF.42845.2"; transcript_id "CUFF.42845.2";
+JH208510.1	BLAST	exon	1146203	1147327	.	-	.	query_id "CUFF.42845.2"; hitName "CUFF.42845.2_hit1"; gene_id "FAKE__CUFF.42845.2"; transcript_id "CUFF.42845.2";
+JH208064.1	BLAST	exon	638021	638519	.	-	.	query_id "CUFF.128925.1"; hitName "CUFF.128925.1_hit1"; gene_id "FAKE__CUFF.128925.1"; transcript_id "CUFF.128925.1";
+JH208064.1	BLAST	exon	620428	620462	.	-	.	query_id "CUFF.128925.1"; hitName "CUFF.128925.1_hit1"; gene_id "FAKE__CUFF.128925.1"; transcript_id "CUFF.128925.1";
