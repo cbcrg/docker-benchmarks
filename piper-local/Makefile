@@ -28,4 +28,4 @@ stats_docker.txt:
 	bash stage.sh docker > stats_docker.txt
 		
 clean:
-	rm -rf stats_* time_*.txt *.png realtime.csv
+	rm -rf stats_* time_*.txt *.png plot.csv
