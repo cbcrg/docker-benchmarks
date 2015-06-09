@@ -1,13 +1,13 @@
-def file1 = new File('trace_native.txt')
-def file2 = new File('trace_docker.txt')
+def file1 = new File('plot_native.txt')
+def file2 = new File('plot_docker.txt')
 
 def all = []
 def index = 0
 
 file1.readLines().each { line -> 
   def cols = line.tokenize('\t')
-  def key = cols[3]
-  def time = cols[19]
+  def key = cols[0]
+  def time = cols[2]
   
   def name = key.tokenize()[0]
   if( name == 'normExonerate' || name == 'matrix' ) return 
@@ -19,8 +19,8 @@ index = 0
 
 file2.readLines().each { line ->
   def cols = line.tokenize('\t')
-  def key = cols[3]
-  def time = cols[19]
+  def key = cols[0]
+  def time = cols[2]
   
   def name = key.tokenize()[0]
   if( name == 'normExonerate' || name == 'matrix' ) return 
