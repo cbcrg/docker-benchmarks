@@ -33,6 +33,7 @@ min_axis = min(c(NF_stats$realtime_docker_log10, NF_stats$realtime_native_log10)
 
 lbreaks = log10(c(1,10,100,1000))
 llabels = c(1,10,100,1000)
+png(filename = "fig_correlation.png", width = 5, height = 4, units = 'in', res = 300)
 qplot(x=realtime_docker_log10, y=realtime_native_log10, data=NF_stats, main="", color=name, ylab="Native tasks avg. time (mins)", xlab="Docker tasks avg. time (mins)") + 
  geom_point(size = 3) + 
  geom_abline(intercept = 0, size=.2) + 
