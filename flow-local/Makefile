@@ -12,10 +12,12 @@ trace_native.txt:
 trace_docker.txt:
 	cat docker_{1..10}/trace.csv | grep -v 'task_id' | sort -k4 > trace_docker.txt
 	
-realtime.csv: trace_native.txt trace_docker.txt
-	groovy join.groovy > realtime.csv
+plot.csv: 
+	./plot.sh docker | sort > plot_docker.txt
+	./plot.sh native | sort > plot_native.txt
+	groovy join.groovy > plot.csv
 	
-figures: time_native.txt time_docker.txt realtime.csv
+figures: time_native.txt time_docker.txt plot.csv
 	Rscript Figures.R
 	
 stats_native.txt:
@@ -25,4 +27,4 @@ stats_docker.txt:
 	bash stage.sh docker > stats_docker.txt
 		
 clean:
-	rm -rf stats_* time_*.txt *.png realtime.csv
+	rm -rf stats_* time_*.txt *.png plot.csv

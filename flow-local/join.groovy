@@ -1,23 +1,33 @@
-def file1 = new File('trace_native.txt')
-def file2 = new File('trace_docker.txt')
+def file1 = new File('plot_native.txt')
+def file2 = new File('plot_docker.txt')
 
 def all = []
+def index = 0
 
-file1.readLines().eachWithIndex { line, index -> 
+file1.readLines().each { line -> 
   def cols = line.tokenize('\t')
-  def key = cols[3]
-  def time = cols[19]
-
-  all[index] = [ name: key.tokenize()[0], native: time ]
+  def key = cols[0]
+  def time = cols[1]
+  
+  def name = key.tokenize()[0]
+  if( name == 'normExonerate' || name == 'matrix' ) return 
+  	
+  all[index++] = [ name: name, native: time ]
 }
 
-file2.readLines().eachWithIndex { line, index ->
-  def cols = line.tokenize('\t')
-  def key = cols[3]
-  def time = cols[19]
+index = 0
 
-  assert key.tokenize()[0] == all[index].name
-  all[index].docker = time 
+file2.readLines().each { line ->
+  def cols = line.tokenize('\t')
+  def key = cols[0]
+  def time = cols[1]
+  
+  def name = key.tokenize()[0]
+  if( name == 'normExonerate' || name == 'matrix' ) return 
+  
+  assert name == all[index].name
+  all[index].docker = time
+  index ++ 
 }
 
 println "name,realtime_docker,realtime_native"

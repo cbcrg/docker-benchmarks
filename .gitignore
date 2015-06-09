@@ -1,1 +1,7 @@
 **/*.zip
+flow-all/
+maria/
+mta-*
+piper-debian/
+rnatoy-aws-*/
+rnatoy-crg-*/
