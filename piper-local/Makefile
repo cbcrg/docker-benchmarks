@@ -16,7 +16,7 @@ trace_docker.txt:
 plot.csv: 
 	./plot.sh docker | sort > plot_docker.txt
 	./plot.sh native | sort > plot_native.txt
-	groovy join.groovy > plot.csv
+	groovy ../scripts/join.groovy > plot.csv
 	
 figures: time_native.txt time_docker.txt plot.csv
 	Rscript Figures.R
