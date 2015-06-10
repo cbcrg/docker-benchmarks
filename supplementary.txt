@@ -1,0 +1,27 @@
+Flow - varcall pipeline 
+------------------------
+
+Image nextflow/flow [6583ce78ca29] 
+https://registry.hub.docker.com/u/nextflow/flow/
+
+Github repo
+https://github.com/nextflow-io/varcalling-flow/tree/docker-benchmark
+
+Piper 
+------
+
+Image cbcrg/piper-nf:sl65 [dc982a05a3da]
+https://registry.hub.docker.com/u/cbcrg/piper-nf
+
+Github repo [cirrus]
+https://github.com/cbcrg/piper-nf/tree/docker-benchmark
+
+
+RnaSeq
+-------
+
+Image nextflow/rnatoy:sl65 [fa576fc1203a]
+
+Github repo
+https://github.com/nextflow-io/rnatoy/tree/docker-benchmark
+

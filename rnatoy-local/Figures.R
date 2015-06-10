@@ -30,7 +30,6 @@ max_axis = max(c(NF_stats[,2], NF_stats[,3]))/1000/60 * 1.08
 qplot(x=(realtime_docker/1000)/60, y=(realtime_native/1000)/60, data=NF_stats, main="", color=name, ylab="Native tasks avg. time (mins)", xlab="Docker tasks avg. time (mins)") + 
  geom_point(size = 3) + coord_cartesian(xlim=c(0,max_axis), ylim=c(0,max_axis)) + 
  geom_abline(intercept = 0, size=.2)+ 
- theme_bw() +
  theme(axis.text.x=element_text(size=10), axis.text.y=element_text(size=10), axis.title.y=element_text(size=8), axis.title.x=element_text(size=8),legend.text=element_text(size=8),legend.title=element_text(size=8)) + 
  labs(color = "Task", title='RNA-Seq')
 dev.off()
