@@ -1,10 +1,10 @@
 all: figures stats_native.txt stats_docker.txt
 
 time_native.txt:
-	bash time.sh native > time_native.txt
+	bash ../scripts/time.sh native > time_native.txt
 
 time_docker.txt:
-	bash time.sh docker > time_docker.txt
+	bash ../scripts/time.sh docker > time_docker.txt
 	
 trace_native.txt:
 	cat native_{1..10}/trace.csv | grep -v 'task_id' | sort -k4 > trace_native.txt

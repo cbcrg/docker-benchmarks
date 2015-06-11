@@ -1,1 +1,1 @@
-../delta.groovy
+../scripts/delta.groovy
