@@ -1,0 +1,94 @@
+http://www.w3.org/blog/news/archives/4743?pk_campaign=feed&pk_kwd=w3c-adopts-new-software-and-document-license
+</link>
+<comments>
+http://www.w3.org/blog/news/archives/4743?pk_campaign=feed&pk_kwd=w3c-adopts-new-software-and-document-license#comments
+</comments>
+<pubDate>Fri, 05 Jun 2015 13:42:53 +0000</pubDate>
+<dc:creator>
+<![CDATA[ Coralie Mercier ]]>
+</dc:creator>
+<category>
+<![CDATA[ Uncategorized ]]>
+</category>
+<guid isPermaLink="false">http://www.w3.org/blog/news/?p=4743</guid>
+<description>
+<![CDATA[
+W3C today adopted a new Software and Document License, an update to the W3C Software License, as the default permissive license in cases such as relicensing of unfinished specs where W3C has decided to use a permissive license. The Software and Document License, compatible with the GPL, permits copying and modification with attribution (by inclusion [&#8230;]<img src="https://www.w3.org/analytics/piwik/piwik.php?idsite=7&amp;rec=1&amp;url=http%3A%2F%2Fwww.w3.org%2Fblog%2Fnews%2Farchives%2F4743%3Fpk_campaign%3Dfeed%26pk_kwd%3Dw3c-adopts-new-software-and-document-license&amp;action_name=W3C+Adopts+new+Software+and+Document+License&amp;urlref=http%3A%2F%2Fwww.w3.org%2Fblog%2Fnews%2Ffeed" style="border:0;width:0;height:0" width="0" height="0" alt="" />
+]]>
+</description>
+<content:encoded>
+<![CDATA[
+<p>W3C today adopted a new <a href="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">Software and Document License</a>, an update to the W3C Software License, as the default permissive license in cases such as relicensing of unfinished specs where W3C has decided to use a permissive license. The Software and Document License, compatible with the GPL, permits copying and modification with attribution (by inclusion of a reference to the original W3C document), and can be used in <a href="http://www.w3.org/community/">W3C Community Groups</a>, among other venues. All work that W3C has previously made available under the <a href="http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231">prior W3C Software License</a> is also made available under the new Software and Document License.</p> <p><img src="https://www.w3.org/analytics/piwik/piwik.php?idsite=7&amp;rec=1&amp;url=http%3A%2F%2Fwww.w3.org%2Fblog%2Fnews%2Farchives%2F4743%3Fpk_campaign%3Dfeed%26pk_kwd%3Dw3c-adopts-new-software-and-document-license&amp;action_name=W3C+Adopts+new+Software+and+Document+License&amp;urlref=http%3A%2F%2Fwww.w3.org%2Fblog%2Fnews%2Ffeed" style="border:0;width:0;height:0" width="0" height="0" alt="" /></p>
+]]>
+</content:encoded>
+<wfw:commentRss>
+http://www.w3.org/blog/news/archives/4743?pk_campaign=feed&pk_kwd=w3c-adopts-new-software-and-document-license/feed
+</wfw:commentRss>
+<slash:comments>0</slash:comments>
+</item>
+<item>
+<title>Geofencing API Draft Published</title>
+<link>
+http://www.w3.org/blog/news/archives/4741?pk_campaign=feed&pk_kwd=geofencing-api-draft-published
+</link>
+<comments>
+http://www.w3.org/blog/news/archives/4741?pk_campaign=feed&pk_kwd=geofencing-api-draft-published#comments
+</comments>
+<pubDate>Thu, 04 Jun 2015 15:37:00 +0000</pubDate>
+<dc:creator>
+<![CDATA[ Coralie Mercier ]]>
+</dc:creator>
+<category>
+<![CDATA[ Publication ]]>
+</category>
+<category>
+<![CDATA[ Web Design and Applications ]]>
+</category>
+<category>
+<![CDATA[ Web of Devices ]]>
+</category>
+<category>
+<![CDATA[ Web of Services ]]>
+</category>
+<guid isPermaLink="false">http://www.w3.org/blog/news/?p=4741</guid>
+<description>
+<![CDATA[
+The Geolocation Working Group has published a Working Draft of Geofencing API. This specification defines an API that lets webapps setup geographic boundaries around specific locations and then receive notifications when the hosting device enters or leaves those areas. Learn more about the Ubiquitous Web Applications Activity.<img src="https://www.w3.org/analytics/piwik/piwik.php?idsite=7&amp;rec=1&amp;url=http%3A%2F%2Fwww.w3.org%2Fblog%2Fnews%2Farchives%2F4741%3Fpk_campaign%3Dfeed%26pk_kwd%3Dgeofencing-api-draft-published&amp;action_name=Geofencing+API+Draft+Published&amp;urlref=http%3A%2F%2Fwww.w3.org%2Fblog%2Fnews%2Ffeed" style="border:0;width:0;height:0" width="0" height="0" alt="" />
+]]>
+</description>
+<content:encoded>
+<![CDATA[
+<p>The <a href="http://www.w3.org/2008/geolocation/">Geolocation Working Group</a> has published a Working Draft of <a href="http://www.w3.org/TR/2015/WD-geofencing-20150604/">Geofencing API</a>. This specification defines an API that lets webapps setup geographic boundaries around specific locations and then receive notifications when the hosting device enters or leaves those areas. Learn more about the <a href="http://www.w3.org/2007/uwa/">Ubiquitous Web Applications Activity</a>.</p> <p><img src="https://www.w3.org/analytics/piwik/piwik.php?idsite=7&amp;rec=1&amp;url=http%3A%2F%2Fwww.w3.org%2Fblog%2Fnews%2Farchives%2F4741%3Fpk_campaign%3Dfeed%26pk_kwd%3Dgeofencing-api-draft-published&amp;action_name=Geofencing+API+Draft+Published&amp;urlref=http%3A%2F%2Fwww.w3.org%2Fblog%2Fnews%2Ffeed" style="border:0;width:0;height:0" width="0" height="0" alt="" /></p>
+]]>
+</content:encoded>
+<wfw:commentRss>
+http://www.w3.org/blog/news/archives/4741?pk_campaign=feed&pk_kwd=geofencing-api-draft-published/feed
+</wfw:commentRss>
+<slash:comments>0</slash:comments>
+</item>
+<item>
+<title>ATAG 2.0 CR updated with simplified exit criteria</title>
+<link>
+http://www.w3.org/blog/news/archives/4739?pk_campaign=feed&pk_kwd=atag-2-0-cr-updated-with-simplified-exit-criteria
+</link>
+<comments>
+http://www.w3.org/blog/news/archives/4739?pk_campaign=feed&pk_kwd=atag-2-0-cr-updated-with-simplified-exit-criteria#comments
+</comments>
+<pubDate>Thu, 04 Jun 2015 15:30:19 +0000</pubDate>
+<dc:creator>
+<![CDATA[ Coralie Mercier ]]>
+</dc:creator>
+<category>
+<![CDATA[ Publication ]]>
+</category>
+<category>
+<![CDATA[ Web Design and Applications ]]>
+</category>
+<category>
+<![CDATA[ Web of Services ]]>
+</category>
+<guid isPermaLink="false">http://www.w3.org/blog/news/?p=4739</guid>
+<description>
+<![CDATA[
+Authoring Tool Accessibility Guidelines (ATAG) 2.0 Candidate Recommendation (CR) has been updated with simplified exit criteria to bring it more in line with common W3C practices for CR exit criteria. There are no substantive changes to ATAG 2.0 itself, only to the CR exit criteria. Implementing ATAG 2.0 is also updated to keep cross-linking between [&#8230;]<img src="https://www.w3.org/analytics/piwik/piwik.php?idsite=7&amp;rec=1&amp;url=http%3A%2F%2Fwww.w3.org%2Fblog%2Fnews%2Farchives%2F4739%3Fpk_campaign%3Dfeed%26pk_kwd%3Datag-2-0-cr-updated-with-simplified-exit-criteria&amp;action_name=ATAG+2.0+CR+updated+with+simplified+exit+criteria&amp;urlref=http%3A%2F%2Fwww.w3.org%2Fblog%2Fnews%2Ffeed" style="border:0;width:0;height:0" width="0" height="0" alt="" />
+]]>
