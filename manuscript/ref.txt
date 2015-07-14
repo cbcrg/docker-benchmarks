@@ -1,0 +1,25 @@
+Altschul, SF, Gish W, Miller W, Myers EW & Lipman DJ. 1990. Basic local alignment search tool. J Mol Biol. (1990) Oct 5; 215:403-410. PMID: 2231712
+
+Boettiger C. 2015. An introduction to Docker for reproducible research. ACM SIGOPS Operating Systems Review, Special Issue on Repeatability and Sharing of Experimental Artifacts. 49(1), 71-79. doi:10.1145/2723872.2723882
+
+Di Tommaso P, et al. 2014. Nextflow: A novel tool for highly scalable computational pipelines. Available at http://dx.doi.org/10.6084/m9.figshare.1254958
+
+Felter W, Ferreira A, Rajamony R, Rubio J. 2014. An Updated Performance Comparison of Virtual Machines and Linux Contain. IBM Research. Available at http://ibm.co/V55Otq (accessed 1 Jun 2015)
+
+Kim D, Pertea G, Trapnell C, Pimentel H, Kelley R, Salzberg SL. 2013. TopHat2: accurate alignment of transcriptomes in the presence of insertions, deletions and gene fusions. Genome Biol. 2013 Apr 25;14(4):R36. doi: 10.1186/gb-2013-14-4-r36.
+
+Langmead B, Salzberg SL. 2012. Fast gapped-read alignment with Bowtie 2. Nat Methods. 2012 Mar 4; 9(4): 357–359. doi:  10.1038/nmeth.1923
+
+Li H, et al. 2009. The Sequence Alignment/Map format and SAMtools. Bioinformatics 25 (16): 2078-2079. doi: 10.1093/bioinformatics/btp352
+
+Li H, Durbin R. 2009. Fast and accurate short read alignment with Burrows–Wheeler transform. Bioinformatics (2009) 25 (14): 1754-1760. doi: 10.1093/bioinformatics/btp324
+
+Notredame C, Higgins DG, Heringa J. 2000. T-Coffee: A novel method for fast and accurate multiple sequence alignment. J Mol Biol. (2000) Sep 8;302(1):205-17. doi:10.1006/jmbi.2000.4042
+
+Slater GSC, Birney E. 2005. Automated generation of heuristics for biological sequence comparison. BMC Bioinformatics (2005) 6:31  doi:10.1186/1471-2105-6-31
+
+Steven J. Mack, et al. 2015. Minimum Information for Reporting Next Generation Sequence Genotyping (MIRING): Guidelines for Reporting HLA and KIR Genotyping via Next Generation Sequencing. Available at http://biorxiv.org/content/early/2015/02/16/015230 (accessed 1 Jun 2015)
+
+Trapnell C, et al. 2010. Transcript assembly and quantification by RNA-Seq reveals unannotated transcripts and isoform switching during cell differentiation. Nature Biotechnology 28, 511–515 doi:10.1038/nbt.1621
+
+Warren RL, Sutton GG, Jones SJM, Holt RA. 2007. Assembling millions of short DNA sequences using SSAKE. Bioinformatics (2007) 23 (4): 500-501. doi: 10.1093/bioinformatics/btl629
