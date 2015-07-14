@@ -48,7 +48,7 @@ qplot(x=realtime_docker_log10, y=realtime_native_log10, data=NF_stats, main="", 
     geom_abline(intercept = 0, size=.2) +
     scale_x_continuous(limits = c(min_axis,max_axis), breaks = lbreaks, labels = llabels) +
     scale_y_continuous(limits = c(min_axis,max_axis), breaks = lbreaks, labels = llabels) +
-    labs(color = "Task", title='Variant-calling', shape = "") +
+    labs(color = "Task", title='Variant calling', shape = "") +
     theme(axis.text.x=element_text(size=10), axis.text.y=element_text(size=10), axis.title.y=element_text(size=8), axis.title.x=element_text(size=8),legend.text=element_text(size=8),legend.title=element_text(size=8))
 
 dev.off()
