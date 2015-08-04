@@ -1,0 +1,6 @@
+.git*
+manuscript/*
+nmdp-flow/*
+piper-nf/*
+rnaseq-toy/*
+scripts/*
