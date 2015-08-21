@@ -19,16 +19,18 @@ field| name		| description
 14. | peak_vmem	| Peak virtual memory usage	
 15. | rchar		| Number of bytes the process read	
 16. | wchar		| Number of bytes the process wrote	
-17. | syscr		| Number of read-like system call invocations that the process performed	
-18. | syscw		| Number of write-like system call invocations that the process performed	
-19. | duration	| Time elapsed to complete since the submission	in milliseconds	
-20. | realtime	| Task execution time i.e. delta between completion and start timestamp in milliseconds (not including container instantiation)	
-21. | rss		| Real memory usage (bytes)
-22. | vmem		| Virtual momory usage (bytes)
-23. | peak_rss	| Peak real memory usage (bytes)
-24. | peak_vmem	| Peak virtual memory usage (bytes)
-25. | rchar		| Number of bytes the process read (bytes)
-26. | wchar		| Number of bytes the process wrote (bytes)
+17. | duration	| Time elapsed to complete since the submission	in milliseconds	
+18. | realtime	| Task execution time i.e. delta between completion and start timestamp in milliseconds (not including container instantiation)	
+19. | rss		| Real memory usage (bytes)
+20. | vmem		| Virtual momory usage (bytes)
+21. | peak_rss	| Peak real memory usage (bytes)
+22. | peak_vmem	| Peak virtual memory usage (bytes)
+23. | rchar		| Number of bytes the process read (bytes)
+24. | wchar		| Number of bytes the process wrote (bytes)
+25.	| syscr		| Number of read-like system call invocations that the process performed
+26. | syscw		| Number of write-like system call invocations that the process performed
+27. | read_bytes	| Number of bytes the process directly read from disk	
+28. | write_bytes	| Number of bytes the process originally dirtied in the page-cache
 
 
 stats_native.txt / stats_docker.txt
@@ -77,9 +79,5 @@ field| name		| description
 4. 	| delta 	| Elapsed time (milliseconds)
 5.	| duration 	| Sum of all tasks duration time (milliseconds)
 6.	| realtime	| Sum of all tasks execution time (milliseconds)
-
-
-
-
 
 
