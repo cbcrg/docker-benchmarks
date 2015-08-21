@@ -10,15 +10,15 @@ This repository contains the benchmarks for these pipelines:
 Quick start 
 ------------
 
-To reproduce the figures from the raw data clone this repository:
+To reproduce the figures from raw data clone this repository:
 
 	https://github.com/cbcrg/docker-benchmarks.git
 
-Then pull the following Docker image: 
+Then pull the required Docker image: 
 
 	docker pull cbcrg/make-peerj5515
 	
-Then launch the `make` process using the following command: 
+Finally launch the `make` script using the following command: 
 
 	docker run -v $PWD:$PWD -w $PWD cbcrg/make-peerj5515 bash make-figures.sh
 	
@@ -44,12 +44,14 @@ The main files produced by the `make` process are:
 * `table.txt`: the numbers included in the *Table 1*
 * `fig_correlation.png`: the figure in included in the manuscript.
 
+See the respective `Makefile`s for more details.
 
 
 Replicate benchmarks 
 ----------------------
 
-Follow the instruction in the respective pipeline repositories: 
+Pipeline executions can be replicated following the instructions 
+in the respective repositories, shown below:
 
 * [nmdp-flow](https://github.com/nextflow-io/nmdp-flow/tree/peerj5515/)
 * [piper-nf](https://github.com/cbcrg/piper-nf/tree/peerj5515)
