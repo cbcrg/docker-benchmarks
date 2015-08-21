@@ -35,19 +35,19 @@ Benchmarks scripts and data are organised in separated folder depending the pipe
 Each of these folders contains a `Makefile` and other scripts used by it to generate the figures. 
 Raw data of each executions are the files `docker_{1..10}/trace.csv` and `native_{1..10}/trace.csv` in the same folder. 
 
-The `make` process produce the following files: 
+The main files produced by the `make` process are: 
 
-Name 				| Description 
---------------------|--------------
-fig_correlation.png | The figure included in the publication 
-time_native.txt		| 
-time_docker.txt		| 
-trace_native.txt	| 
-trace_docker.txt	| 
-stats_native.txt	| 
-stats_docker.txt 	| 
-plot_native.txt		| 
-plot_docker.txt		| 
+* `table.txt`: the numbers included in the *Table 1*
+* `fig_correlation.png`: the figure in included in the manuscript.
 
 
+
+Replicate benchmarks 
+----------------------
+
+Follow the instruction in the respective pipeline repositories: 
+
+* [nmdp-flow](https://github.com/nextflow-io/nmdp-flow/tree/peerj5515/)
+* [piper-nf](https://github.com/cbcrg/piper-nf/tree/peerj5515)
+* [rnaseq-toy](https://github.com/nextflow-io/rnatoy/tree/peerj5515)
 

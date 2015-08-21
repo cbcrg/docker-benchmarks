@@ -1,24 +1,3 @@
-native <- read.delim("time_native.txt", header=TRUE)
-docker <- read.delim("time_docker.txt", header=TRUE)
-
-n_elapsed <- native$delta / 1000 / 60 
-d_elapsed <- docker$delta / 1000 / 60 
-
-png(filename = "fig_wall_time.png")
-boxplot(n_elapsed, d_elapsed, names = c("native","docker"))
-title("Execution wall-clock time")
-dev.off()
-
-n_cputime <- native$realtime / 1000 / 60 
-d_cputime <- docker$realtime / 1000 / 60 
-
-png(filename = "fig_run_time.png")
-boxplot(n_cputime, d_cputime, names = c("native","docker"))
-title("Execution total run time")
-dev.off()
-
-
-
 library(reshape)
 library(ggplot2)
 library(grid)
