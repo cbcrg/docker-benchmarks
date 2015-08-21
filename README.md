@@ -3,22 +3,26 @@ Docker benchmarks
 
 This repository contains the benchmarks for these pipelines: 
 
-* [Piper-nf](https://github.com/cbcrg/piper-nf/tree/docker-benchmark)
-* [RNA-Seq](https://github.com/nextflow-io/rnatoy/tree/docker-benchmark)
-* [NMDP-Flow](https://github.com/nextflow-io/nmdp-flow/tree/docker-benchmark)
+* [Rnaseq-toy](https://github.com/nextflow-io/rnatoy/)
+* [Nmdp-flow](https://github.com/nextflow-io/nmdp-flow/)
+* [Piper-nf](https://github.com/cbcrg/piper-nf/)
 
 Quick start 
 ------------
 
-To reproduce the figures from the raw data pull the following Docker container: 
+To reproduce the figures from the raw data clone this repository:
+
+	https://github.com/cbcrg/docker-benchmarks.git
+
+Then pull the following Docker image: 
 
 	docker pull cbcrg/make-peerj5515
 	
-Then run the following command: 
+Then launch the `make` process using the following command: 
 
 	docker run -v $PWD:$PWD -w $PWD cbcrg/make-peerj5515 bash make-figures.sh
 	
-(if you do not or cannot use Docker, it will be required to download and install 
+(if you don't want or cannot use Docker, it will be required to download and install 
 the required dependencies: R, Datamash, Make and Groovy. See the included 
 [Dockefile](https://raw.githubusercontent.com/cbcrg/docker-benchmarks/master/Dockerfile) for configuration details).
 
@@ -28,9 +32,9 @@ Structure of the repository
 
 Benchmarks scripts and data are organised in separated folder depending the pipeline executed: 
 
+* [Rnaseq-toy](rnaseq-toy)
 * [nmdp-flow](nmdp-flow)
 * [piper-nf](piper-nf)
-* [rnaseq-toy](rnaseq-toy)
 
 Each of these folders contains a `Makefile` and other scripts used by it to generate the figures. 
 Raw data of each executions are the files `docker_{1..10}/trace.csv` and `native_{1..10}/trace.csv` in the same folder. 
