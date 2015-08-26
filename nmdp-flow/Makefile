@@ -61,14 +61,14 @@ trace_docker.txt:
 	cat docker_{1..10}/trace.csv | grep -v 'task_id' | sort -k4 > trace_docker.txt
 	
 #
-# Calculates the median execution time grouping for tasks of the same type for each execution,
+# Calculates the median duration time grouping for tasks of the same type for each execution,
 # both for "native" and "docker" executions. 
 # 
 # Then collects all of them into a tab-separated file, where each line contains 
 # three fields: task name; native median task execution time; docker median execution time 
 # 
-# Task execution time is defined as real wall-clock time from task begin to end, 
-# not including container instantiation time when docker is used.
+# Task duration time is defined as real wall-clock time from task submission to completion, 
+# *including* container instantiation time when docker is used.
 # 
 # in :
 #	native_{1..10}/trace.csv

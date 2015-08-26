@@ -12,7 +12,7 @@ Quick start
 
 To reproduce the figures from raw data clone this repository:
 
-	https://github.com/cbcrg/docker-benchmarks.git
+	https://github.com/cbcrg/docker-benchmarks.git && cd docker-benchmarks
 
 Then pull the required Docker image: 
 
@@ -25,6 +25,15 @@ Finally launch the `make` script using the following command:
 (if you don't want or cannot use Docker, it will be required to download and install 
 the required dependencies: R, Datamash, Make and Groovy. See the included 
 [Dockefile](https://raw.githubusercontent.com/cbcrg/docker-benchmarks/master/Dockerfile) for configuration details).
+
+It will create the following files: 
+
+	./rnaseq-toy/table.txt
+	./rnaseq-toy/fig_correlation.png
+	./nmdp-flow/table.txt
+	./nmdp-flow/fig_correlation.png	
+	./piper-nf/table.txt
+	./piper-nf/fig_correlation.png
 
 
 Structure of the repository  
