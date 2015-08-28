@@ -12,9 +12,9 @@ field| name		| description
 7. 	| submit	| Task submit timestamp 
 8. 	| duration	| Time elapsed to complete since the submission	
 9.  | realtime	| Task execution time i.e. delta between completion and start timestamp (not including container instantiation)
-10. | %cpu		| Per. usage CPU	
+10. | %cpu		| CPU utilization of the process expressed in percentage (cputime/realtime ratio)	
 11. | rss		| Real memory usage (resident set size) 	
-12. | vmem		| Virtual momory usage	
+12. | vmem		| Virtual memory usage	
 13. | peak_rss  | Peak real memory usage 	
 14. | peak_vmem	| Peak virtual memory usage	
 15. | rchar		| Number of bytes the process read	
@@ -22,7 +22,7 @@ field| name		| description
 17. | duration	| Time elapsed to complete since the submission	in milliseconds	
 18. | realtime	| Task execution time i.e. delta between completion and start timestamp in milliseconds (not including container instantiation)	
 19. | rss		| Real memory usage (bytes)
-20. | vmem		| Virtual momory usage (bytes)
+20. | vmem		| Virtual memory usage (bytes)
 21. | peak_rss	| Peak real memory usage (bytes)
 22. | peak_vmem	| Peak virtual memory usage (bytes)
 23. | rchar		| Number of bytes the process read (bytes)

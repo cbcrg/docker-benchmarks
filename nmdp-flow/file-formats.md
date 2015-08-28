@@ -12,7 +12,7 @@ field| name		| description
 7. 	| submit	| Task submit timestamp 
 8. 	| duration	| Time elapsed to complete since the submission	
 9.  | realtime	| Task execution time i.e. delta between completion and start timestamp (not including container instantiation)
-10. | %cpu		|  CPU utilization of the process expressed in percentage (cputime/realtime ratio)	
+10. | %cpu		| CPU utilization of the process expressed in percentage (cputime/realtime ratio)	
 11. | rss		| Real memory usage (resident set size) 	
 12. | vmem		| Virtual memory usage	
 13. | peak_rss  | Peak real memory usage 	
@@ -21,7 +21,7 @@ field| name		| description
 16. | wchar		| Number of bytes the process wrote	
 17. | syscr		| Number of read-like system call invocations that the process performed	
 18. | syscw		| Number of write-like system call invocations that the process performed	
-19. | duration	| Elapsed time betwween submission and completion in milliseconds	
+19. | duration	| Time elapsed to complete since the submission	in milliseconds	
 20. | realtime	| Task execution time i.e. delta between completion and start timestamp in milliseconds (not including container instantiation)	
 21. | rss		| Real memory usage (bytes)
 22. | vmem		| Virtual memory usage (bytes)
