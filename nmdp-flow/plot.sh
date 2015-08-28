@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function stats() {
     STAGES=$(tail -n +2  $1 | cut -f 4 | cut -f 1 -d ' ' | sort | uniq)
     for x in $STAGES; do 

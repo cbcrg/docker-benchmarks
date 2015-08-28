@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function stats() {
     STAGES=$(cat trace_${1}.txt | cut -f 4 | cut -f 1 -d ' ' | uniq | sort)
     for x in $STAGES; do 
