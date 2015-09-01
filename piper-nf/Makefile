@@ -17,7 +17,7 @@ all: stats_native.txt stats_docker.txt table.txt fig_correlation.png
 #	time_native.txt
 #
 time_native.txt:
-	bash ../scripts/time.sh native > time_native.txt
+	./time.sh native > time_native.txt
 
 # 
 # Collects the pipeline start/stop timestamp and aggregates tasks duration time
@@ -31,7 +31,7 @@ time_native.txt:
 #	time_docker.txt
 #
 time_docker.txt:
-	bash ../scripts/time.sh docker > time_docker.txt
+	./time.sh docker > time_docker.txt
 	
 #
 # Collects the trace runtime info for each "native" execution into a single file,
@@ -107,7 +107,7 @@ fig_correlation.png: plot.csv stats_native.txt stats_docker.txt
 #	stats_native.txt
 # 	
 stats_native.txt:
-	bash stage.sh native > stats_native.txt
+	./stage.sh native > stats_native.txt
 	
 #
 # Aggregate median and mean execution time for tasks of the same type across all pipeline 
@@ -119,7 +119,7 @@ stats_native.txt:
 #	stats_docker.txt
 # 		
 stats_docker.txt:
-	bash stage.sh docker > stats_docker.txt
+	./stage.sh docker > stats_docker.txt
 
 #
 # Produces the main stats included in "Table 1": 
