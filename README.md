@@ -12,7 +12,7 @@ Quick start
 
 To reproduce the figures from raw data clone this repository:
 
-	https://github.com/cbcrg/docker-benchmarks.git && cd docker-benchmarks
+	git clone https://github.com/cbcrg/docker-benchmarks.git && cd docker-benchmarks
 
 Then pull the required Docker image: 
 
@@ -20,7 +20,7 @@ Then pull the required Docker image:
 	
 Finally launch the `make` script using the following command: 
 
-	docker run -v $PWD:$PWD -w $PWD cbcrg/make-peerj5515 bash make-figures.sh
+	docker run -v $PWD:$PWD -w $PWD cbcrg/make-peerj5515 bash make-all.sh
 	
 (if you don't want or cannot use Docker, it will be required to download and install 
 the required dependencies: R, Datamash, Make and Groovy. See the included 

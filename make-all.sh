@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e 
 set -o
-(cd nmdp-flow && make)
-(cd piper-nf && make)
-(cd rnaseq-toy && make)
+(cd nmdp-flow && make clean all)
+(cd piper-nf && make clean all)
+(cd rnaseq-toy && make clean all)
 
 echo 'DONE'
 echo ''
