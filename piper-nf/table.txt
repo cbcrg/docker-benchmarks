@@ -1,5 +1,5 @@
 PIPER           : native  docker
 Task mean time  : 0.6  1.0
-Median exec time: 58.5  97.1
+Mean exec time  : 58.5 (±0.2) 96.5 (±0.8) 
 Stddev exec time: 0.6  2.6
-Slow-down       : 1.659
+Slow-down       : 1.650

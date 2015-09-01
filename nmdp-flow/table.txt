@@ -1,5 +1,5 @@
 VARIANT CALL.   : native  docker
 Task mean time  : 26.1  26.7
-Median exec time: 1252.6  1283.6
+Mean exec time  : 1254.0 (±1.6) 1283.8 (±0.8) 
 Stddev exec time: 4.9  2.4
-Slow-down       : 1.025
+Slow-down       : 1.024

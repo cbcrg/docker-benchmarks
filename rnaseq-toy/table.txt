@@ -1,5 +1,5 @@
 RNA-SEQ         : native  docker
-Task mean time  : 128.7  128.6
-Median exec time: 1158.4  1157.6
+Task mean time  : 128.5  128.7
+Mean exec time  : 1156.9 (±4.3) 1158.2 (±2.1) 
 Stddev exec time: 13.5  6.7
-Slow-down       : 0.999
+Slow-down       : 1.001
