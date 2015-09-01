@@ -26,14 +26,6 @@ Finally launch the `make` script using the following command:
 the required dependencies: R, Datamash, Make and Groovy. See the included 
 [Dockefile](https://raw.githubusercontent.com/cbcrg/docker-benchmarks/master/Dockerfile) for configuration details).
 
-It will create the following files: 
-
-	./rnaseq-toy/table.txt
-	./rnaseq-toy/fig_correlation.png
-	./nmdp-flow/table.txt
-	./nmdp-flow/fig_correlation.png	
-	./piper-nf/table.txt
-	./piper-nf/fig_correlation.png
 
 
 Structure of the repository  
