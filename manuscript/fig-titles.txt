@@ -1,3 +1,5 @@
+Table 1 - Mean execution times for pipelines and tasks with and without Docker. Time is expressed in minutes. The mean and the standard deviation were estimated from 10 separate runs. Slowdown represents the ratio of the mean execution time with Docker to the mean execution time when Docker was not used.
+
 Figure 1 – RNA-Seq pipeline tasks, native vs. Docker mean execution times. Time elapsed (in minutes) to complete since the submission including the container instantiation. Each point represents the mean task time for the same type in one pipeline run.   
 
 Figure 2 – Variant calling pipeline tasks, native vs. Docker mean execution times. Time elapsed (in minutes) to complete since the submission including the container instantiation. Each point represents the mean task time for the same type in one pipeline run.   

@@ -22,7 +22,7 @@ Finally launch the `make` script using the following command:
 
 	docker run -v $PWD:$PWD -w $PWD cbcrg/make-peerj5515 bash make-all.sh
 	
-(if you don't want or cannot use Docker, it will be required to download and install 
+(if you don't want or cannot use Docker, you will need to download and install 
 the required dependencies: R, Datamash, Make and Groovy. See the included 
 [Dockefile](https://raw.githubusercontent.com/cbcrg/docker-benchmarks/master/Dockerfile) for configuration details).
 
@@ -31,7 +31,7 @@ the required dependencies: R, Datamash, Make and Groovy. See the included
 Structure of the repository  
 ----------------------------
 
-Benchmarks scripts and data are organised in separated folder depending the pipeline executed: 
+Benchmarks scripts and data are organised in separate folders depending the pipeline executed: 
 
 * [Rnaseq-toy](rnaseq-toy)
 * [nmdp-flow](nmdp-flow)
@@ -52,7 +52,7 @@ Replicate benchmarks
 ----------------------
 
 Pipeline executions can be replicated following the instructions 
-in the respective repositories, shown below:
+in the respective repositories, listed below:
 
 * [nmdp-flow](https://github.com/nextflow-io/nmdp-flow/tree/peerj5515/)
 * [piper-nf](https://github.com/cbcrg/piper-nf/tree/peerj5515)
