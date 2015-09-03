@@ -1,0 +1,5 @@
+Figure 1 – RNA-Seq pipeline tasks, native vs. Docker mean execution times. Time elapsed (in minutes) to complete since the submission including the container instantiation. Each point represents the mean task time for the same type in one pipeline run.   
+
+Figure 2 – Variant calling pipeline tasks, native vs. Docker mean execution times. Time elapsed (in minutes) to complete since the submission including the container instantiation. Each point represents the mean task time for the same type in one pipeline run.   
+
+Figure 3 – Piper pipeline tasks, native vs. Docker mean execution times. Time elapsed (in minutes) to complete since the submission including the container instantiation. Each point represents the mean task time for the same type in one pipeline run.
