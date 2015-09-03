@@ -12,7 +12,7 @@ Quick start
 
 To reproduce the figures from raw data clone this repository:
 
-	git clone https://github.com/cbcrg/docker-benchmarks.git && cd docker-benchmarks
+	git clone -b peerj5515 https://github.com/cbcrg/docker-benchmarks.git && cd docker-benchmarks
 
 Then pull the required Docker image: 
 
